@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://www.huangmingzhao.cn
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :title.html
 permalink_defaults:
 
 # Directory
@@ -77,8 +77,39 @@ theme: material
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo:
-    github: git@github.com:ishareme/ishareme.github.io.git,master
-    coding: git@git.coding.net:domyself/blog.git,master
+  - type: git
+    repo:
+      github: git@github.com:ishareme/ishareme.github.io.git,master
+      coding: git@git.coding.net:domyself/blog.git,master
+  - type: baidu_url_submitter
 
+
+
+
+
+
+# 自动生成sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+
+
+baidu_url_submit:
+  count: 10 # 提交最新的一个链接
+  host: huangmingzhao.cn # 在百度站长平台中注册的域名
+  token: 9MCKCEcuNW3ho67F # 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
+  path: baidu_urls.txt # 文本文档的地址， 新链接会保存在此文本文档里
+
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+
+
+search:
+	path: search.xml
+	field: all
