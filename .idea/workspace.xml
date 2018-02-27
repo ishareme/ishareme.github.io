@@ -46,8 +46,8 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/ClipImageDemo-FileAPI.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="440">
-                <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+              <first_editor relative-caret-position="22">
+                <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="41" />
                 <folding>
                   <marker date="1519747162000" expanded="true" signature="2033:2599" ph="{...}" />
                   <marker date="1519747162000" expanded="true" signature="2084:2597" ph="{...}" />
@@ -340,12 +340,12 @@
       <workItem from="1519711467817" duration="904000" />
       <workItem from="1519718918007" duration="1220000" />
       <workItem from="1519724223007" duration="149000" />
-      <workItem from="1519747086996" duration="101000" />
+      <workItem from="1519747086996" duration="135000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119937000" />
+    <option name="totallyTimeSpent" value="119971000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -738,8 +738,8 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/ClipImageDemo-FileAPI.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="440">
-            <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+          <first_editor relative-caret-position="22">
+            <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="41" />
             <folding>
               <marker date="1519747162000" expanded="true" signature="2033:2599" ph="{...}" />
               <marker date="1519747162000" expanded="true" signature="2084:2597" ph="{...}" />
