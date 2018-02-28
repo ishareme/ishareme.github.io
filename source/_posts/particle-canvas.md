@@ -9,7 +9,7 @@ categories:
      - 渣技术
 ---
 
-根据网上的思路用canvas实现之前知乎的粒子背景。 [github 地址](https://github.com/ishareme/ClipImage/)
+根据网上的思路用canvas实现之前知乎的粒子背景。 [github 地址](https://github.com/ishareme/Particle/)
 
 <!-- more -->
 
