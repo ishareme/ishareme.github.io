@@ -1,6 +1,6 @@
 ---
 title: canvas API 汇总
-date: 2018-02-28 00:02:01
+date: 2018-02-24 00:02:01
 comments: true
 
 tags:

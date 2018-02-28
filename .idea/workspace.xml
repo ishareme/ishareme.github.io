@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fcf47ff-ad16-4ea5-bf78-ef47f71d43e8" name="默认的" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/source/_posts/canvas-api.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/source/_posts/publish-subscribe-mode.md" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/canvas-api.md" afterPath="$PROJECT_DIR$/source/_posts/canvas-api.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -62,13 +63,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="canvas-api.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="canvas-api.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/_posts/canvas-api.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="22">
-                <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+              <first_editor relative-caret-position="44">
+                <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
                 <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="publish-subscribe-mode.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/_posts/publish-subscribe-mode.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="500">
+                <caret line="54" column="3" lean-forward="false" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
+                <folding>
+                  <marker date="1519748015000" expanded="true" signature="174:201" ph="{...}" />
+                  <marker date="1519748015000" expanded="true" signature="221:814" ph="{...}" />
+                  <marker date="1519748015000" expanded="true" signature="270:472" ph="{...}" />
+                  <marker date="1519748015000" expanded="true" signature="339:394" ph="{...}" />
+                  <marker date="1519748015000" expanded="true" signature="527:812" ph="{...}" />
+                  <marker date="1519748015000" expanded="true" signature="695:779" ph="{...}" />
+                  <marker date="1519748015000" expanded="true" signature="883:927" ph="{...}" />
+                  <marker date="1519748015000" expanded="true" signature="959:1002" ph="{...}" />
+                </folding>
               </first_editor>
               <second_editor />
             </state>
@@ -102,7 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/themes/material/layout/post.ejs" />
         <option value="$PROJECT_DIR$/robots.txt" />
         <option value="$PROJECT_DIR$/index.html" />
@@ -153,6 +175,7 @@
         <option value="$PROJECT_DIR$/source/_posts/ClipImage.md" />
         <option value="$PROJECT_DIR$/source/_posts/ClipImageDemo-FileAPI.md" />
         <option value="$PROJECT_DIR$/source/_posts/canvas-api.md" />
+        <option value="$PROJECT_DIR$/source/_posts/publish-subscribe-mode.md" />
       </list>
     </option>
   </component>
@@ -365,12 +388,12 @@
       <workItem from="1519711467817" duration="904000" />
       <workItem from="1519718918007" duration="1220000" />
       <workItem from="1519724223007" duration="149000" />
-      <workItem from="1519747086996" duration="460000" />
+      <workItem from="1519747086996" duration="1230000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120296000" />
+    <option name="totallyTimeSpent" value="121066000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -437,13 +460,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/themes/material/source/css/disqus-proxy.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/1111111.md" />
     <entry file="file://$PROJECT_DIR$/source/_posts/h.md" />
     <entry file="file://$PROJECT_DIR$/source/_posts/fistpost.md">
@@ -776,9 +792,29 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/canvas-api.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="22">
-            <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+          <first_editor relative-caret-position="44">
+            <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
             <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/publish-subscribe-mode.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="500">
+            <caret line="54" column="3" lean-forward="false" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
+            <folding>
+              <marker date="1519748015000" expanded="true" signature="174:201" ph="{...}" />
+              <marker date="1519748015000" expanded="true" signature="221:814" ph="{...}" />
+              <marker date="1519748015000" expanded="true" signature="270:472" ph="{...}" />
+              <marker date="1519748015000" expanded="true" signature="339:394" ph="{...}" />
+              <marker date="1519748015000" expanded="true" signature="527:812" ph="{...}" />
+              <marker date="1519748015000" expanded="true" signature="695:779" ph="{...}" />
+              <marker date="1519748015000" expanded="true" signature="883:927" ph="{...}" />
+              <marker date="1519748015000" expanded="true" signature="959:1002" ph="{...}" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
