@@ -11,7 +11,7 @@ categories:
 ---
 
 用ClipImage和File Api 写的一个截图小🌰
-> [example](http://f2er.meitu.com/hmz/clipImageDemo/example/)
+> [example](http://f2er.meitu.com/hmz/ClipImageDemo/example/)
 
 > [github](https://github.com/ishareme/ClipImageDemo)
 <!-- more -->
