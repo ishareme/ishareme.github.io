@@ -9,7 +9,9 @@ categories:
      - 渣技术
 ---
 
-根据网上的思路用canvas实现之前知乎的粒子背景。 [github 地址](https://github.com/ishareme/Particle/)
+根据网上的思路用canvas实现之前知乎的粒子背景。 
+> [github 地址](https://github.com/ishareme/Particle/)
+> [example](https://github.com/ishareme/ParticleCanvas/)
 
 <!-- more -->
 
@@ -21,8 +23,6 @@ categories:
 - 每两个小点之间在一定距离之内，绘制线
 - 当鼠标移入的时候，让内部的小点跟随鼠标的移动
 
-
-canvas实现裁剪的方法比较多，比如
 
 #### 需要一张 Canvas 画布
 ```js
