@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fcf47ff-ad16-4ea5-bf78-ef47f71d43e8" name="默认的" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/source/_posts/practice-summary-andy-move2.md" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/particle-canvas.md" afterPath="$PROJECT_DIR$/source/_posts/particle-canvas.md" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/practice-summary-andy-move.md" afterPath="$PROJECT_DIR$/source/_posts/practice-summary-andy-move.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,12 +18,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="practice-summary-andy-move.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="practice-summary-andy-move.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/_posts/practice-summary-andy-move.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="304">
                 <caret line="178" column="5" lean-forward="false" selection-start-line="178" selection-start-column="5" selection-end-line="178" selection-end-column="5" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="practice-summary-andy-move.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/practice-summary-andy-move.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-11706">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="practice-summary-andy-move2.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/_posts/practice-summary-andy-move2.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="660">
+                <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -46,7 +68,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/themes/material/layout/post.ejs" />
         <option value="$PROJECT_DIR$/robots.txt" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/public/index.html" />
@@ -97,6 +118,7 @@
         <option value="$PROJECT_DIR$/source/_posts/canvas-api.md" />
         <option value="$PROJECT_DIR$/source/_posts/publish-subscribe-mode.md" />
         <option value="$PROJECT_DIR$/source/_posts/practice-summary-andy-move.md" />
+        <option value="$PROJECT_DIR$/source/_posts/practice-summary-andy-move2.md" />
       </list>
     </option>
   </component>
@@ -163,19 +185,19 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\asus\Desktop\blog\themes\material\source" />
-      <recent name="C:\Users\asus\Desktop\blog\themes\material" />
-      <recent name="C:\Users\asus\Desktop\blog\themes" />
-      <recent name="C:\Users\asus\Desktop\blog" />
-      <recent name="C:\Users\asus\Desktop\blog\public" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/source/_posts" />
       <recent name="$PROJECT_DIR$/themes/material" />
       <recent name="C:\Users\asus\Desktop\blog\source\_posts" />
       <recent name="C:\Users\asus\Desktop\blog\themes\material\source\img\random" />
       <recent name="C:\Users\asus\Desktop\blog\themes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\Desktop\blog\themes\material\source" />
+      <recent name="C:\Users\asus\Desktop\blog\themes\material" />
+      <recent name="C:\Users\asus\Desktop\blog\themes" />
+      <recent name="C:\Users\asus\Desktop\blog" />
+      <recent name="C:\Users\asus\Desktop\blog\public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -310,15 +332,16 @@
       <workItem from="1519724223007" duration="149000" />
       <workItem from="1519747086996" duration="1230000" />
       <workItem from="1519827585730" duration="665000" />
-      <workItem from="1519869204156" duration="35000" />
+      <workItem from="1519869204156" duration="2848000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121766000" />
+    <option name="totallyTimeSpent" value="124579000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11848341" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -381,8 +404,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/_posts/1111111.md" />
-    <entry file="file://$PROJECT_DIR$/source/_posts/h.md" />
     <entry file="file://$PROJECT_DIR$/source/_posts/fistpost.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -634,14 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/hello-world3.md" />
     <entry file="file://$PROJECT_DIR$/themes/material/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -723,6 +736,33 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="304">
             <caret line="178" column="5" lean-forward="false" selection-start-line="178" selection-start-column="5" selection-end-line="178" selection-end-column="5" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/practice-summary-andy-move.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11706">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/practice-summary-andy-move2.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="660">
+            <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
             <folding />
           </first_editor>
           <second_editor />
