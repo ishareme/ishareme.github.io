@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://www.huangmingzhao.cn/practice-summary-andy-move2.html</loc>
-    <lastmod>2018-03-02T08:43:46.000Z</lastmod>
+    <lastmod>2018-03-02T08:54:43.000Z</lastmod>
     <data>
         <display>
         <title>实习&andyMove小结</title>
@@ -48,14 +48,16 @@
 
     
   <url>
-    <loc>http://www.huangmingzhao.cn/particle-canvas.html</loc>
+    <loc>http://www.huangmingzhao.cn/Express-mongoose-stu-management.html</loc>
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     <data>
         <display>
-        <title>canvas粒子背景</title>
-        <pubTime>2018-02-28T02:31:01.000Z</pubTime>
+        <title>基于Express+mongoose搭建的学生管理系统</title>
+        <pubTime>2017-08-07T12:48:01.000Z</pubTime>
         
-        <tag>Canvas</tag>
+        <tag>mongoose</tag>
+         
+        <tag>Express</tag>
          
          
            
@@ -90,26 +92,6 @@
 
     
   <url>
-    <loc>http://www.huangmingzhao.cn/JavaScript01.html</loc>
-    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>巩固JavaScript系列--01数据类型和函数</title>
-        <pubTime>2017-08-12T11:25:01.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="渣技术" url="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.huangmingzhao.cn/canvas-api.html</loc>
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     <data>
@@ -128,7 +110,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://www.huangmingzhao.cn/hello-world.html</loc>
@@ -167,13 +148,14 @@
     </url>
 
     
+    
   <url>
-    <loc>http://www.huangmingzhao.cn/meitu-item-one.html</loc>
+    <loc>http://www.huangmingzhao.cn/meitu-item-two.html</loc>
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     <data>
         <display>
-        <title>美图H5项目总结--m8s_strut</title>
-        <pubTime>2017-10-28T13:57:01.000Z</pubTime>
+        <title>美图H5项目总结--bplus_halloween</title>
+        <pubTime>2017-10-29T12:41:01.000Z</pubTime>
         
         <tag>美图</tag>
          
@@ -190,34 +172,12 @@
 
     
   <url>
-    <loc>http://www.huangmingzhao.cn/ClipImageDemo-FileAPI.html</loc>
+    <loc>http://www.huangmingzhao.cn/meitu-item-one.html</loc>
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     <data>
         <display>
-        <title>Html5 File API 与 ClipImage结合 Demo</title>
-        <pubTime>2018-02-27T15:56:01.000Z</pubTime>
-        
-        <tag>Canvas</tag>
-         
-        <tag>FileAPI</tag>
-         
-         
-           
-             
-              <breadCrumb title="渣技术" url="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.huangmingzhao.cn/meitu-item-two.html</loc>
-    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>美图H5项目总结--bplus_halloween</title>
-        <pubTime>2017-10-29T12:41:01.000Z</pubTime>
+        <title>美图H5项目总结--m8s_strut</title>
+        <pubTime>2017-10-28T13:57:01.000Z</pubTime>
         
         <tag>美图</tag>
          
@@ -254,16 +214,56 @@
 
     
   <url>
-    <loc>http://www.huangmingzhao.cn/Express-mongoose-stu-management.html</loc>
+    <loc>http://www.huangmingzhao.cn/particle-canvas.html</loc>
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     <data>
         <display>
-        <title>基于Express+mongoose搭建的学生管理系统</title>
-        <pubTime>2017-08-07T12:48:01.000Z</pubTime>
+        <title>canvas粒子背景</title>
+        <pubTime>2018-02-28T02:31:01.000Z</pubTime>
         
-        <tag>mongoose</tag>
+        <tag>Canvas</tag>
          
-        <tag>Express</tag>
+         
+           
+             
+              <breadCrumb title="渣技术" url="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.huangmingzhao.cn/ClipImageDemo-FileAPI.html</loc>
+    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>Html5 File API 与 ClipImage结合 Demo</title>
+        <pubTime>2018-02-27T15:56:01.000Z</pubTime>
+        
+        <tag>Canvas</tag>
+         
+        <tag>FileAPI</tag>
+         
+         
+           
+             
+              <breadCrumb title="渣技术" url="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.huangmingzhao.cn/JavaScript01.html</loc>
+    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>巩固JavaScript系列--01数据类型和函数</title>
+        <pubTime>2017-08-12T11:25:01.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
          
          
            
