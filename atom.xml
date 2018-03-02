@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>黄明照--一个在路上慢慢行走的前端人</title>
+  
+  <subtitle>黄明照个人博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.huangmingzhao.cn/"/>
+  <updated>2018-03-02T07:24:41.000Z</updated>
+  <id>http://www.huangmingzhao.cn/</id>
+  
+  <author>
+    <name>黄明照</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>实习&amp;andyMove小结</title>
+    <link href="http://www.huangmingzhao.cn/practice-summary-andy-move2.html"/>
+    <id>http://www.huangmingzhao.cn/practice-summary-andy-move2.html</id>
+    <published>2018-03-06T09:01:01.000Z</published>
+    <updated>2018-03-02T07:24:41.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这学期的实习也快结束了，想想还是挺感慨的。这次对andyMove的总结就当做对自己这学期实习的总结吧。&lt;/p&gt;
+&lt;p&gt;在美图也快满4个月了，总感觉自己进步的非常慢，有时候会在想是不是自己变得不上心了？变得不进取了？对！！你就是不进取了，松懈了！！不，这完全不是我！！！！当然
+      
+    
+    </summary>
+    
+      <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="美图" scheme="http://www.huangmingzhao.cn/tags/%E7%BE%8E%E5%9B%BE/"/>
+    
+      <category term="H5项目" scheme="http://www.huangmingzhao.cn/tags/H5%E9%A1%B9%E7%9B%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>canvas粒子背景</title>
+    <link href="http://www.huangmingzhao.cn/particle-canvas.html"/>
+    <id>http://www.huangmingzhao.cn/particle-canvas.html</id>
+    <published>2018-02-28T02:31:01.000Z</published>
+    <updated>2018-03-02T07:24:41.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;根据网上的思路用canvas实现之前知乎的粒子背景。 &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/ishareme/Particle/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;github 地址&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/ishareme/ParticleCanvas/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;example&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Canvas" scheme="http://www.huangmingzhao.cn/tags/Canvas/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Html5 File API 与 ClipImage结合 Demo</title>
+    <link href="http://www.huangmingzhao.cn/ClipImageDemo-FileAPI.html"/>
+    <id>http://www.huangmingzhao.cn/ClipImageDemo-FileAPI.html</id>
+    <published>2018-02-27T15:56:01.000Z</published>
+    <updated>2018-03-02T07:24:41.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;用ClipImage和File Api 写的一个截图小🌰&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://f2er.meitu.com/hmz/ClipImageDemo/example/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;example&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/ishareme/ClipImageDemo&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;github&lt;/a&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Canvas" scheme="http://www.huangmingzhao.cn/tags/Canvas/"/>
+    
+      <category term="FileAPI" scheme="http://www.huangmingzhao.cn/tags/FileAPI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ClipImage 基于canvas截图工具</title>
+    <link href="http://www.huangmingzhao.cn/ClipImage.html"/>
+    <id>http://www.huangmingzhao.cn/ClipImage.html</id>
+    <published>2018-02-27T09:38:01.000Z</published>
+    <updated>2018-03-02T07:24:41.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近重新看了下canvas的api，于是乎就撸了几个小demo。clipImage基于canvas的截图小工具 &lt;a href=&quot;https://github.com/ishareme/ClipImage/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;github 地址&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Canvas" scheme="http://www.huangmingzhao.cn/tags/Canvas/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>canvas API 汇总</title>
+    <link href="http://www.huangmingzhao.cn/canvas-api.html"/>
+    <id>http://www.huangmingzhao.cn/canvas-api.html</id>
+    <published>2018-02-23T16:02:01.000Z</published>
+    <updated>2018-03-02T07:24:41.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;canvas 的 API 汇总&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/
+      
+    
+    </summary>
+    
+      <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="canvas" scheme="http://www.huangmingzhao.cn/tags/canvas/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javascript 观察者模式 (订阅者与发布者)</title>
+    <link href="http://www.huangmingzhao.cn/publish-subscribe-mode.html"/>
+    <id>http://www.huangmingzhao.cn/publish-subscribe-mode.html</id>
+    <published>2018-02-23T15:10:01.000Z</published>
+    <updated>2018-03-02T07:24:41.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;javascript 观察者模式 (订阅者与发布者)&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class
+      
+    
+    </summary>
+    
+      <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="js" scheme="http://www.huangmingzhao.cn/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>实习&amp;andyMove小结</title>
+    <link href="http://www.huangmingzhao.cn/practice-summary-andy-move.html"/>
+    <id>http://www.huangmingzhao.cn/practice-summary-andy-move.html</id>
+    <published>2018-02-06T09:01:01.000Z</published>
+    <updated>2018-03-02T07:24:41.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这学期的实习也快结束了，想想还是挺感慨的。这次对andyMove的总结就当做对自己这学期实习的总结吧。&lt;/p&gt;
+&lt;p&gt;在美图也快满4个月了，总感觉自己进步的非常慢，有时候会在想是不是自己变得不上心了？变得不进取了？对！！你就是不进取了，松懈了！！不，这完全不是我！！！！当然
+      
+    
+    </summary>
+    
+      <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="美图" scheme="http://www.huangmingzhao.cn/tags/%E7%BE%8E%E5%9B%BE/"/>
+    
+      <category term="H5项目" scheme="http://www.huangmingzhao.cn/tags/H5%E9%A1%B9%E7%9B%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>美图H5项目总结--lancome</title>
+    <link href="http://www.huangmingzhao.cn/meitu-item-lancome-hk.html"/>
+    <id>http://www.huangmingzhao.cn/meitu-item-lancome-hk.html</id>
+    <published>2018-01-05T09:01:01.000Z</published>
+    <updated>2018-03-02T07:24:41.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对lancome的小项目做个小结&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="美图" scheme="http://www.huangmingzhao.cn/tags/%E7%BE%8E%E5%9B%BE/"/>
+    
+      <category term="H5项目" scheme="http://www.huangmingzhao.cn/tags/H5%E9%A1%B9%E7%9B%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>美图H5项目总结--bplus_halloween</title>
+    <link href="http://www.huangmingzhao.cn/meitu-item-two.html"/>
+    <id>http://www.huangmingzhao.cn/meitu-item-two.html</id>
+    <published>2017-10-29T12:41:01.000Z</published>
+    <updated>2018-03-02T07:24:41.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;昨天对项目m8s_strut做了个小结(详见=&amp;gt;&lt;a href=&quot;https://blog.huangmingzhao.cn/meitu-item-one.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;m8s_strut&lt;/a&gt;)，今天就继续对项目二bplus_halloween做个总结吧，嘿嘿…技术很渣，看官勿喷。。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="美图" scheme="http://www.huangmingzhao.cn/tags/%E7%BE%8E%E5%9B%BE/"/>
+    
+      <category term="H5项目" scheme="http://www.huangmingzhao.cn/tags/H5%E9%A1%B9%E7%9B%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>美图H5项目总结--m8s_strut</title>
+    <link href="http://www.huangmingzhao.cn/meitu-item-one.html"/>
+    <id>http://www.huangmingzhao.cn/meitu-item-one.html</id>
+    <published>2017-10-28T13:57:01.000Z</published>
+    <updated>2018-03-02T07:24:41.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;来美图实习也一个月了~从校招之后可能有点放松过头，导致与最近感觉把学习给放一边了，前几天对校招做了个总结(详见=&amp;gt;&lt;a href=&quot;https://blog.huangmingzhao.cn/autumn-recruit-Interview.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;秋招面试总结&lt;/a&gt;)，所以最近要好好的收拾下心态，继续勤勤恳恳在前端路探索，接下来会对每个项目做一个总结，嘿嘿…技术很渣，看官勿喷。。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="美图" scheme="http://www.huangmingzhao.cn/tags/%E7%BE%8E%E5%9B%BE/"/>
+    
+      <category term="H5项目" scheme="http://www.huangmingzhao.cn/tags/H5%E9%A1%B9%E7%9B%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>秋招面试总结</title>
+    <link href="http://www.huangmingzhao.cn/autumn-recruit-Interview.html"/>
+    <id>http://www.huangmingzhao.cn/autumn-recruit-Interview.html</id>
+    <published>2017-10-26T14:11:01.000Z</published>
+    <updated>2018-03-02T07:24:41.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;感觉秋招也结束了，在美图也一个月了。从拿到美图offer的时候就想说对秋招做个总结，苦于自己太懒了。可能也是因为准备秋招的那段时间对我来说有点煎熬，导致于到目前为止自己还在一个放松的状态，放松的有点过头了，没有集中注意力在技术方面。今天伟程师傅说项目做完要好好总结，才发现自己也要该好好醒醒了。好了，言归正题，对秋招也好好做个总结。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="秋招" scheme="http://www.huangmingzhao.cn/tags/%E7%A7%8B%E6%8B%9B/"/>
+    
+      <category term="面试" scheme="http://www.huangmingzhao.cn/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pm2的使用</title>
+    <link href="http://www.huangmingzhao.cn/the-use-of-pm2.html"/>
+    <id>http://www.huangmingzhao.cn/the-use-of-pm2.html</id>
+    <published>2017-08-20T15:48:01.000Z</published>
+    <updated>2018-03-02T07:24:41.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;大家是不是会遇到过node app,js 然后Ctrl+C 就挂了？ 下面利用pm2永久保持进程。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Node" scheme="http://www.huangmingzhao.cn/tags/Node/"/>
+    
+      <category term="pm2" scheme="http://www.huangmingzhao.cn/tags/pm2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>巩固JavaScript系列--01数据类型和函数</title>
+    <link href="http://www.huangmingzhao.cn/JavaScript01.html"/>
+    <id>http://www.huangmingzhao.cn/JavaScript01.html</id>
+    <published>2017-08-12T11:25:01.000Z</published>
+    <updated>2018-03-02T07:24:41.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近感觉校招也快到了，感觉自己的知识体系还是挺乱的，所以拿起了红宝书再仔细读读，对知识点再巩固巩固，想每次学习完对整体的一个知识点总结总结，写下了自己的JavaScript系列学习。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="JavaScript" scheme="http://www.huangmingzhao.cn/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于Express+mongoose搭建的学生管理系统</title>
+    <link href="http://www.huangmingzhao.cn/Express-mongoose-stu-management.html"/>
+    <id>http://www.huangmingzhao.cn/Express-mongoose-stu-management.html</id>
+    <published>2017-08-07T12:48:01.000Z</published>
+    <updated>2018-03-02T07:24:41.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;上一周学了下mongoose，虽然学了点皮毛，但还是想写写总结总结，这也是我的第一篇技术博客。还是蛮开心的，happy~~来，切入正题！项目源码我会放在github上。 &lt;a href=&quot;https://github.com/ishareme/student_manage/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;github 地址&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="mongoose" scheme="http://www.huangmingzhao.cn/tags/mongoose/"/>
+    
+      <category term="Express" scheme="http://www.huangmingzhao.cn/tags/Express/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的第一篇博文</title>
+    <link href="http://www.huangmingzhao.cn/fistpost.html"/>
+    <id>http://www.huangmingzhao.cn/fistpost.html</id>
+    <published>2017-07-28T13:58:45.000Z</published>
+    <updated>2017-08-07T14:52:45.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;2017-07-28 没有特别日子，很平淡，这是我的第一篇博文，今天对我或许还有点意义。前阵日子在搭建此博客，其实有想搭建个人博客的想法好早就有了，现在才去实现，感觉确实是有点晚了。不过终于还是迈开了步子，有去做的事情，不管什么时候去做我感觉都是好的，接下来的事情就看自己的坚持与再坚持。我也不知道第一篇博文要写什么，哈哈…文笔不好只能胡写一通了~~说说搭建博客的目的吧，主要有三点吧：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="闲言语" scheme="http://www.huangmingzhao.cn/categories/%E9%97%B2%E8%A8%80%E8%AF%AD/"/>
+    
+    
+      <category term="生活" scheme="http://www.huangmingzhao.cn/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://www.huangmingzhao.cn/hello-world.html"/>
+    <id>http://www.huangmingzhao.cn/hello-world.html</id>
+    <published>2017-07-20T12:25:45.000Z</published>
+    <updated>2018-03-02T07:24:41.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>

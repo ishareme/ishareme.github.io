@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            基于Express+mongoose搭建的学生管理系统 | 
+        
+        黄明照--一个在路上慢慢行走的前端人
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="上一周学了下mongoose，虽然学了点皮毛，但还是想写写总结总结，这也是我的第一篇技术博客。还是蛮开心的，happy~~来，切入正题！项目源码我会放在github上。 github 地址">
+    <meta name="keywords" content=",mongoose,Express">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="黄明照--一个在路上慢慢行走的前端人">
+    <meta name="msapplication-starturl" content="http://www.huangmingzhao.cn/Express-mongoose-stu-management.html">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="黄明照--一个在路上慢慢行走的前端人">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://www.huangmingzhao.cn/Express-mongoose-stu-management.html">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="基于Express+mongoose搭建的学生管理系统 | 黄明照--一个在路上慢慢行走的前端人">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="上一周学了下mongoose，虽然学了点皮毛，但还是想写写总结总结，这也是我的第一篇技术博客。还是蛮开心的，happy~~来，切入正题！项目源码我会放在github上。 github 地址">
+    <meta property="og:article:tag" content="mongoose"> <meta property="og:article:tag" content="Express"> 
+
+    
+        <meta property="article:published_time" content="Mon Aug 07 2017 20:48:01 GMT+0800">
+        <meta property="article:modified_time" content="Fri Mar 02 2018 15:24:41 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://www.huangmingzhao.cn/Express-mongoose-stu-management.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://www.huangmingzhao.cn/Express-mongoose-stu-management.html",
+    "headline": "基于Express+mongoose搭建的学生管理系统",
+    "datePublished": "Mon Aug 07 2017 20:48:01 GMT+0800",
+    "dateModified": "Fri Mar 02 2018 15:24:41 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "黄明照",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "黄明照--一个在路上慢慢行走的前端人",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",mongoose,Express",
+    "description": "上一周学了下mongoose，虽然学了点皮毛，但还是想写写总结总结，这也是我的第一篇技术博客。还是蛮开心的，happy~~来，切入正题！项目源码我会放在github上。 github 地址",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码目录"><span class="post-toc-number">1.</span> <span class="post-toc-text">代码目录</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建并初始化目录"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">创建并初始化目录</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第三方模块安装"><span class="post-toc-number">2.</span> <span class="post-toc-text">第三方模块安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-Express"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">1. Express</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-mongoose"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2. mongoose</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#开始写代码咯"><span class="post-toc-number">3.</span> <span class="post-toc-text">开始写代码咯~~</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#核心代码-敲黑板"><span class="post-toc-number">4.</span> <span class="post-toc-text">核心代码(敲黑板~~~)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#结尾"><span class="post-toc-number">5.</span> <span class="post-toc-text">结尾</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                基于Express+mongoose搭建的学生管理系统
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>黄明照</strong>
+        <span>8月 07, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Express/">Express</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/mongoose/">mongoose</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=基于Express+mongoose搭建的学生管理系统&url=http://www.huangmingzhao.cn/Express-mongoose-stu-management.html&pic=http://www.huangmingzhao.cn/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=基于Express+mongoose搭建的学生管理系统&url=http://www.huangmingzhao.cn/Express-mongoose-stu-management.html&via=黄明照" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://www.huangmingzhao.cn/Express-mongoose-stu-management.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://www.huangmingzhao.cn/Express-mongoose-stu-management.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>上一周学了下mongoose，虽然学了点皮毛，但还是想写写总结总结，这也是我的第一篇技术博客。还是蛮开心的，happy~~来，切入正题！项目源码我会放在github上。 <a href="https://github.com/ishareme/student_manage/" target="_blank" rel="noopener">github 地址</a></p>
+<a id="more"></a>
+<h2 id="代码目录"><a href="#代码目录" class="headerlink" title="代码目录"></a>代码目录</h2><p><img src="http://oubl6fzsm.bkt.clouddn.com/secondpost.png" alt="secondPost"></p>
+<p>有些东西可根据自己喜好设置，并非必须。</p>
+<h3 id="创建并初始化目录"><a href="#创建并初始化目录" class="headerlink" title="创建并初始化目录"></a>创建并初始化目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir student_manage</span><br><span class="line">$ <span class="built_in">cd</span> student_manage</span><br><span class="line">$ npm init</span><br></pre></td></tr></table></figure>
+<h2 id="第三方模块安装"><a href="#第三方模块安装" class="headerlink" title="第三方模块安装"></a>第三方模块安装</h2><h3 id="1-Express"><a href="#1-Express" class="headerlink" title="1. Express"></a>1. Express</h3><p><strong>1.1</strong>　Express 基于 Node.js 平台，快速、开放、极简的 web 开发框架。<br>　<a href="http://www.expressjs.com.cn/4x/api.html" target="_blank" rel="noopener">Express 4.x API 中文手册</a>　安装如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install express --save</span><br></pre></td></tr></table></figure>
+<p><strong>1.2</strong>　body-parser用于解析客户端请求的body中的内容,内部使用JSON编码处理,url编码处理以及对于文件的上传处理。安装如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install body-parser --save</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-mongoose"><a href="#2-mongoose" class="headerlink" title="2. mongoose"></a>2. mongoose</h3><p><strong>2.1</strong>　　mongoose是在node.js异步环境下对mongodb进行便捷操作的对象模型工具。<br><a href="http://www.nodeclass.com/api/mongoose.html" target="_blank" rel="noopener">mongoose文档</a>　安装如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install mongoose --save</span><br></pre></td></tr></table></figure></p>
+<h2 id="开始写代码咯"><a href="#开始写代码咯" class="headerlink" title="开始写代码咯~~"></a>开始写代码咯~~</h2><p>当然在项目开始前要确定电脑是否安装mongoDB　</p>
+<p><a href="https://www.mongodb.com/download-center?jmp=nav#community" target="_blank" rel="noopener">mongoDB下载地址</a>　<br><a href="https://robomongo.org/download" target="_blank" rel="noopener">mongoDB图形化界面robomongo</a></p>
+<p>下载好具体怎么配置还请问度娘或Google吧，本文不做介绍了哈。注意：安装完mongoDB的时候进行项目时要把lib目录下的mongod服务器打开哈~~</p>
+<p>先展示下最终实现的项目效果，以防大家心里有数。</p>
+<p><img src="http://oubl6fzsm.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170808002035.png" alt="首页"><br>首页</p>
+<p><img src="http://oubl6fzsm.bkt.clouddn.com/index.png" alt="添加页"><br>添加页</p>
+<p><img src="http://oubl6fzsm.bkt.clouddn.com/modify.png" alt="修改页"><br>修改页</p>
+<p>前台具体代码就不列出来，比较简单，为了节约时间，就使用bootstrap进行快速生成，当然大家可以进行美化。</p>
+<h2 id="核心代码-敲黑板"><a href="#核心代码-敲黑板" class="headerlink" title="核心代码(敲黑板~~~)"></a>核心代码(敲黑板~~~)</h2><ol>
+<li>mydb.js 对数据库进行连接</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">    //引入mongoose模块</span><br><span class="line">var mongoose=require(<span class="string">'mongoose'</span>)</span><br><span class="line"></span><br><span class="line">//数据库连接地址  链接到myStudent数据库</span><br><span class="line">var DB_URL=<span class="string">'mongodb://localhost:27017/myStudent'</span></span><br><span class="line">//数据库连接</span><br><span class="line">mongoose.connect(DB_URL)</span><br><span class="line"></span><br><span class="line">//连接成功终端显示消息</span><br><span class="line">mongoose.connection.on(<span class="string">'connected'</span>,<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    console.log(<span class="string">'mongoose connection open to '</span>+DB_URL)</span><br><span class="line">&#125;)</span><br><span class="line">//连接失败终端显示消息</span><br><span class="line">mongoose.connection.on(<span class="string">'error'</span>,<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    console.log(<span class="string">'mongoose error '</span>)</span><br><span class="line">&#125;)</span><br><span class="line">//连接断开终端显示消息</span><br><span class="line">mongoose.connection.on(<span class="string">'disconnected'</span>,<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    console.log(<span class="string">'mongoose disconnected'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//创建一个Schema  每一个schema会一一对应mongo中的collection</span><br><span class="line">var schema=mongoose.Schema</span><br><span class="line"></span><br><span class="line">//实例化一个Schema</span><br><span class="line">var studentSchema=new schema(</span><br><span class="line">    &#123;</span><br><span class="line">        //设置studentSchema信息的数据格式</span><br><span class="line">        name:&#123;<span class="built_in">type</span>:String&#125;,</span><br><span class="line">        sex:&#123;<span class="built_in">type</span>:String&#125;,</span><br><span class="line">        age:&#123;<span class="built_in">type</span>:Number&#125;,</span><br><span class="line">        phone:&#123;<span class="built_in">type</span>:String&#125;,</span><br><span class="line">        email:&#123;<span class="built_in">type</span>:String&#125;,</span><br><span class="line">        other:&#123;<span class="built_in">type</span>:String&#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    //&#123;versionKey: <span class="literal">false</span>&#125;是干嘛用？如果不加这个设置，我们通过mongoose第一次创建某个集合时，</span><br><span class="line">    // 它会给这个集合设定一个versionKey属性值，我们不需要，所以不让它显示</span><br><span class="line">    &#123;</span><br><span class="line">        versionKey:<span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">//生成一个具体student的model并导出</span><br><span class="line">//第一个参数是集合名，在数据库中会自动加s</span><br><span class="line">//把Model名字字母全部变小写和在后面加复数s</span><br><span class="line">var student=mongoose.model(<span class="string">'student'</span>,studentSchema)</span><br><span class="line">//将Student的model导出</span><br><span class="line">module.exports=student</span><br></pre></td></tr></table></figure>
+<p>里面的代码我已逐条进行注释。有几个要说明的地方：1.可能大家看到Schema的时候有一点懵，不过他理解起来挺简单的就像关系型数据库里面的表。定义可以这么讲：<strong>schema</strong>是mongoose里会用到的一种数据模式，<strong>可以理解为表结构的定义；每个schema会映射到mongodb中的一个collection</strong>，它不具备操作数据库的能力。2.生成一个student的model的时候，如果myStudent数据库里面没有student(第一个参数的值)集合的话，系统会自动创建一个students的collection，注意在student后面加了<strong>s</strong>。</p>
+<ol>
+<li>app.js<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br></pre></td><td class="code"><pre><span class="line">//导入express模块</span><br><span class="line">var expres=require(<span class="string">'express'</span>)</span><br><span class="line">var bodyParser=require(<span class="string">'body-parser'</span>)</span><br><span class="line">//导入之前写的mydb.js</span><br><span class="line">var student=require(<span class="string">'./mydb'</span>)</span><br><span class="line"></span><br><span class="line">//调用函数， express实例化</span><br><span class="line">var app=expres()</span><br><span class="line"></span><br><span class="line">app.use(bodyParser.urlencoded(&#123;extended:<span class="literal">false</span>&#125;))</span><br><span class="line">app.use(bodyParser.json())</span><br><span class="line"></span><br><span class="line">//处理静态目录</span><br><span class="line">app.use(expres.static(<span class="string">'www'</span>))</span><br><span class="line"></span><br><span class="line">// 允许跨域访问／／／</span><br><span class="line">app.all(<span class="string">'/api/*'</span>, <span class="keyword">function</span> (req, res, next) &#123;</span><br><span class="line">    res.header(<span class="string">'Access-Control-Allow-Origin'</span>, <span class="string">'*'</span>)</span><br><span class="line">    res.header(<span class="string">'Access-Control-Allow-Headers'</span>, <span class="string">'x-Request-with'</span>)</span><br><span class="line">    res.header(<span class="string">'Access-Control-Allow-Methods'</span>, <span class="string">'PUT,POST,GET,DELETE,OPTIONS'</span>)</span><br><span class="line">    res.header(<span class="string">'X-Powered-By'</span>, <span class="string">'4.15.2'</span>)</span><br><span class="line">    res.header(<span class="string">'Content-Type'</span>, <span class="string">'application/json;charset=utf-8'</span>)</span><br><span class="line">    next()   //执行下一个中间件。</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//首页展示获取数据</span><br><span class="line">app.post(<span class="string">'/index'</span>,<span class="keyword">function</span> (req,res) &#123;</span><br><span class="line">    //mongoose 数据查找</span><br><span class="line">    student.find(&#123;&#125;).<span class="built_in">exec</span>(<span class="keyword">function</span> (error,data) &#123;</span><br><span class="line">        <span class="keyword">if</span> (error)&#123;</span><br><span class="line">            console.log(<span class="string">'数据获取失败'</span>+error)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            res.json(&#123;</span><br><span class="line">                status:<span class="string">'y'</span>,</span><br><span class="line">                message:<span class="string">'查询成功'</span>,</span><br><span class="line">                //传递返回的数据</span><br><span class="line">                data:data</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//修改页面 获取数据</span><br><span class="line">app.post(<span class="string">'/modify'</span>,<span class="keyword">function</span> (req,res) &#123;</span><br><span class="line">    //mongoose根据条件进行查找</span><br><span class="line">    student.find(&#123;_id: req.body.id&#125;).<span class="built_in">exec</span>(<span class="keyword">function</span> (error,data) &#123;</span><br><span class="line">        console.log(<span class="string">'2'</span>)</span><br><span class="line">        <span class="keyword">if</span> (error)&#123;</span><br><span class="line">            console.log(<span class="string">'数据获取失败'</span>+error)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            console.log(data)</span><br><span class="line">            res.json(&#123;</span><br><span class="line">                status:<span class="string">'y'</span>,</span><br><span class="line">                message:<span class="string">'查询成功'</span>,</span><br><span class="line">                data:data</span><br><span class="line">            &#125;)</span><br><span class="line">            console.log(4)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//修改提交修改数据库</span><br><span class="line">app.post(<span class="string">'/modifyStu'</span>,<span class="keyword">function</span> (req,res) &#123;</span><br><span class="line">    console.log(<span class="string">'1'</span>)</span><br><span class="line">    console.log(req.body)</span><br><span class="line">    //查询的条件</span><br><span class="line">    var whereStr=&#123;_id:req.body.id&#125;</span><br><span class="line">    //更新的内容</span><br><span class="line">    var updateStr=&#123;</span><br><span class="line">        <span class="variable">$set</span>:&#123;</span><br><span class="line">            name:req.body.name,</span><br><span class="line">            sex:req.body.sex,</span><br><span class="line">            age: req.body.age,</span><br><span class="line">            phone:req.body.phone,</span><br><span class="line">            email:req.body.email,</span><br><span class="line">            other:req.body.other,</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    //对数据库进行更新</span><br><span class="line">    student.update(whereStr,updateStr,<span class="keyword">function</span> (error) &#123;</span><br><span class="line">        <span class="keyword">if</span> (error)&#123;</span><br><span class="line">            console.log(<span class="string">'数据修改失败:'</span>+error)</span><br><span class="line">            res.json(&#123;</span><br><span class="line">                status:<span class="string">'y'</span>,</span><br><span class="line">                message:<span class="string">'修改失败'</span>,</span><br><span class="line">                data:req.body</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            console.log(<span class="string">'数据修改成功'</span>)</span><br><span class="line">            res.json(&#123;</span><br><span class="line">                status:<span class="string">'y'</span>,</span><br><span class="line">                message:<span class="string">'修改成功'</span>,</span><br><span class="line">                data:req.body</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//删除数据库其中的项</span><br><span class="line">app.post(<span class="string">'/del'</span>,<span class="keyword">function</span> (req,res) &#123;</span><br><span class="line">    //mongoose根据指定条件进行删除</span><br><span class="line">    student.remove(&#123;_id: req.body.id&#125;,<span class="keyword">function</span>(error)&#123;</span><br><span class="line">        <span class="keyword">if</span> (error)&#123;</span><br><span class="line">            console.log(<span class="string">'数据获取失败'</span>+error)</span><br><span class="line">            res.json(&#123;</span><br><span class="line">                status:<span class="string">'y'</span>,</span><br><span class="line">                message:<span class="string">'删除不成功'</span>,</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            res.json(&#123;</span><br><span class="line">                status:<span class="string">'y'</span>,</span><br><span class="line">                message:<span class="string">'删除成功'</span>,</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//导航栏search操作</span><br><span class="line">app.post(<span class="string">'/findName'</span>,<span class="keyword">function</span> (req,res) &#123;</span><br><span class="line">    console.log(req.body.searchName)</span><br><span class="line">    student.find(&#123;name: req.body.searchName&#125;).<span class="built_in">exec</span>(<span class="keyword">function</span> (error,data) &#123;</span><br><span class="line">        <span class="keyword">if</span> (error)&#123;</span><br><span class="line">            console.log(<span class="string">'查询失败'</span>+error)</span><br><span class="line">            res.json(&#123;</span><br><span class="line">                status:<span class="string">'y'</span>,</span><br><span class="line">                message:<span class="string">'查询失败'</span>,</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            res.json(&#123;</span><br><span class="line">                status:<span class="string">'y'</span>,</span><br><span class="line">                message:<span class="string">'查询成功'</span>,</span><br><span class="line">                data:data</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//添加数据库操作</span><br><span class="line">app.post(<span class="string">'/addStu'</span>,<span class="keyword">function</span> (req,res) &#123;</span><br><span class="line">    console.log(req.body)</span><br><span class="line">    //实例化一个student</span><br><span class="line">    var newStu=new student(&#123;</span><br><span class="line">        name:req.body.name,</span><br><span class="line">        sex:req.body.sex,</span><br><span class="line">        age:req.body.age,</span><br><span class="line">        phone:req.body.phone,</span><br><span class="line">        email:req.body.email,</span><br><span class="line">        other:req.body.other,</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">    //对实例化的内容进行保存</span><br><span class="line">    newStu.save(<span class="keyword">function</span> (error) &#123;</span><br><span class="line">        <span class="keyword">if</span> (error)&#123;</span><br><span class="line">            console.log(<span class="string">'数据添加失败:'</span>+error)</span><br><span class="line">            res.json(&#123;</span><br><span class="line">                status:<span class="string">'y'</span>,</span><br><span class="line">                message:<span class="string">'添加失败'</span>,</span><br><span class="line">                data:req.body</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            console.log(<span class="string">'数据添加成功'</span>)</span><br><span class="line">            res.json(&#123;</span><br><span class="line">                status:<span class="string">'y'</span>,</span><br><span class="line">                message:<span class="string">'添加成功'</span>,</span><br><span class="line">                data:req.body</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//服务器监听端口</span><br><span class="line">app.listen(3000,()=&gt;&#123;</span><br><span class="line">    console.log(<span class="string">'node is ok'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>到处服务器搭建完成，接下来就是对各个js代码进行操作，ajax获取表单数据请求服务器，ajax获取地址栏请求服务器等等。然后ajax在接收到服务器返回的数据，对此进行渲染到前台页面，此项目我用的是 <strong>artTemplate</strong> 进行模板渲染。</p>
+<p>就举一个栗子吧~~</p>
+<ol>
+<li>添加页的 addAjax.js<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line"></span><br><span class="line">    //添加表单验证方法   手机号的验证</span><br><span class="line">    $.validator.addMethod(<span class="string">'isPhone'</span>,<span class="keyword">function</span> (value,ele) &#123;</span><br><span class="line">        var length=value.length</span><br><span class="line">        var reg=/^1[34578]\d&#123;9&#125;$/</span><br><span class="line">        <span class="keyword">if</span> (length &gt;= 11 &amp;&amp; reg.test(value))&#123;</span><br><span class="line">            <span class="built_in">return</span> <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">return</span> <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    //对表单进行验证</span><br><span class="line">    $(<span class="string">'#addForm'</span>).validate(&#123;</span><br><span class="line">        debug:<span class="literal">true</span>,</span><br><span class="line">        //验证的规则</span><br><span class="line">        rules:&#123;</span><br><span class="line">            name:&#123;</span><br><span class="line">                required:<span class="literal">true</span>,</span><br><span class="line">                minlength:3</span><br><span class="line">            &#125;,</span><br><span class="line">            age:&#123;</span><br><span class="line">                required:<span class="literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            phone:&#123;</span><br><span class="line">                required:<span class="literal">true</span>,</span><br><span class="line">                isPhone:<span class="literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            email:&#123;</span><br><span class="line">                required:<span class="literal">true</span>,</span><br><span class="line">                email:<span class="literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        //错误的提示信息</span><br><span class="line">        messages:&#123;</span><br><span class="line">            name:&#123;</span><br><span class="line">                required:<span class="string">'姓名不能为空'</span>,</span><br><span class="line">                minlength:<span class="string">'姓名不能少于3位'</span></span><br><span class="line">            &#125;,</span><br><span class="line">            age:&#123;</span><br><span class="line">                required:<span class="string">'年龄不能为空'</span></span><br><span class="line">            &#125;,</span><br><span class="line">            phone:&#123;</span><br><span class="line">                required:<span class="string">'手机号不能为空'</span>,</span><br><span class="line">                isPhone:<span class="string">'手机号格式错误'</span></span><br><span class="line">            &#125;,</span><br><span class="line">            email:&#123;</span><br><span class="line">                required:<span class="string">'邮箱不能为空'</span>,</span><br><span class="line">                email:<span class="string">'邮箱格式错误'</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        //正确时执行的函数</span><br><span class="line">        submitHandler:<span class="keyword">function</span> (form) &#123;</span><br><span class="line">            //ajax请求</span><br><span class="line">            $.ajax(&#123;</span><br><span class="line">                <span class="built_in">type</span>:<span class="string">'post'</span>,</span><br><span class="line">                url:<span class="string">'/addStu'</span>,</span><br><span class="line">                dataType:<span class="string">'json'</span>,</span><br><span class="line">                //表单数据序列化</span><br><span class="line">                data:$(form).serialize(),</span><br><span class="line">                //ajax请求成功操作</span><br><span class="line">                success:<span class="keyword">function</span> (res) &#123;</span><br><span class="line">                    $(<span class="string">'.modal-body'</span>).text(res.message)</span><br><span class="line">                    //显示出模态框</span><br><span class="line">                    $(<span class="string">'.modal'</span>).modal(<span class="string">'show'</span>).on(<span class="string">'hidden.bs.modal'</span>,<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                        <span class="keyword">if</span> (res.message == <span class="string">'添加成功'</span>)&#123;</span><br><span class="line">                            location.href=<span class="string">'index.html'</span></span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;)</span><br><span class="line">                &#125;,</span><br><span class="line">                //ajax请求失败操作</span><br><span class="line">                error:<span class="keyword">function</span> (jqXHR) &#123;</span><br><span class="line">                    console.log(jqXHR.status)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>表单验证我用了 <strong>jquery.validate.js</strong></p>
+<ol>
+<li><p>添加完毕，首页进行渲染  index.html(部分)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;each&#125;&#125;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;&#123;&#123;<span class="variable">$value</span>.name&#125;&#125;&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;&#123;&#123;<span class="variable">$value</span>.sex&#125;&#125;&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;&#123;&#123;<span class="variable">$value</span>.age&#125;&#125;&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;&#123;&#123;<span class="variable">$value</span>.phone&#125;&#125;&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;&#123;&#123;<span class="variable">$value</span>.email&#125;&#125;&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;</span><br><span class="line">            &lt;a href=<span class="string">"/modify.html?id=&#123;&#123;<span class="variable">$value</span>._id&#125;&#125;"</span> class=<span class="string">"modify"</span> data-index=<span class="string">"&#123;&#123;<span class="variable">$value</span>._id&#125;&#125;"</span>&gt;修改&lt;/a&gt;</span><br><span class="line">            &lt;a href=<span class="string">""</span> class=<span class="string">"del"</span> data-index=<span class="string">"&#123;&#123;<span class="variable">$value</span>._id&#125;&#125;"</span>&gt;删除&lt;/a&gt;</span><br><span class="line">        &lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &#123;&#123;/each&#125;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>首页的 indexAjax.js(部分)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        <span class="built_in">type</span>:<span class="string">'post'</span>,</span><br><span class="line">        url:<span class="string">'/index'</span>,</span><br><span class="line">        success:<span class="keyword">function</span> (res) &#123;</span><br><span class="line">            //进行模板渲染</span><br><span class="line">            var strHtml=template(<span class="string">'showStu'</span>,res.data)</span><br><span class="line">            $(<span class="string">'#tb'</span>).html(strHtml)</span><br><span class="line">            </span><br><span class="line">            ......代码有点长就不放了哈~~........</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>   夜已深。不知不觉写这个文章也花了挺长时间的，哈哈哈，不过自己开心就行~~ 自己在做这个项目的时候，以为会很快搞完，但是还是遇到了问题，哎，纠结了好久，现在也没得出个答案，后来用了另一种的解决方法，感觉有点像投机取巧，但好像也不能怎么说，哈哈…个人技术水平真的很渣，写文章一方面是分享，一方面是再次重温自己的思路。请勿喷哈~~自己的第一篇技术博客，写的有点匆忙，不过还是希望可以给大家带来帮助。<br>   　　　　　　<br>   　　　　　　<br>   　　　　　　<br>   　　　　　　                        　　　　　于 厦门高崎新村 自己的小屋
+   　　　　　　                        　　　　　
+   　　　　　　                        　　　　　
+   　　　　　　                        　　　　　
+   　　　　　　                        　　　　　</p>
+<p>本文首发于个人博客　&gt;&gt; <a href="http://www.huangmingzhao.cn/">黄明照–一个在路上慢慢行走的前端人</a></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/JavaScript01.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/fistpost.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="黄明照's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        youremail@email.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>黄明照--一个在路上慢慢行走的前端人
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

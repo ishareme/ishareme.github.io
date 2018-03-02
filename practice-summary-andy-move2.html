@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            实习&amp;andyMove小结 | 
+        
+        黄明照--一个在路上慢慢行走的前端人
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="黄明照、黄明照的个人博客、黄明照的个人网站、一个在路上慢慢行走的前端人">
+    <meta name="keywords" content=",美图,H5项目">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="黄明照--一个在路上慢慢行走的前端人">
+    <meta name="msapplication-starturl" content="http://www.huangmingzhao.cn/practice-summary-andy-move2.html">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="黄明照--一个在路上慢慢行走的前端人">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://www.huangmingzhao.cn/practice-summary-andy-move2.html">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="实习&amp;andyMove小结 | 黄明照--一个在路上慢慢行走的前端人">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="黄明照、黄明照的个人博客、黄明照的个人网站、一个在路上慢慢行走的前端人">
+    <meta property="og:article:tag" content="美图"> <meta property="og:article:tag" content="H5项目"> 
+
+    
+        <meta property="article:published_time" content="Tue Mar 06 2018 17:01:01 GMT+0800">
+        <meta property="article:modified_time" content="Fri Mar 02 2018 15:24:41 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://www.huangmingzhao.cn/practice-summary-andy-move2.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://www.huangmingzhao.cn/practice-summary-andy-move2.html",
+    "headline": "实习&andyMove小结",
+    "datePublished": "Tue Mar 06 2018 17:01:01 GMT+0800",
+    "dateModified": "Fri Mar 02 2018 15:24:41 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "黄明照",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "黄明照--一个在路上慢慢行走的前端人",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",美图,H5项目",
+    "description": "黄明照、黄明照的个人博客、黄明照的个人网站、一个在路上慢慢行走的前端人",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#反思"><span class="post-toc-number">1.</span> <span class="post-toc-text">反思</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#BUG"><span class="post-toc-number">2.</span> <span class="post-toc-text">BUG</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#QQ平台，结果页不能滑动"><span class="post-toc-number">2.0.1.</span> <span class="post-toc-text">QQ平台，结果页不能滑动</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#上传完图片要进行预加载"><span class="post-toc-number">2.0.2.</span> <span class="post-toc-text">上传完图片要进行预加载</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ios秀秀端结果页转发qq和qq空间转发不了"><span class="post-toc-number">2.0.3.</span> <span class="post-toc-text">ios秀秀端结果页转发qq和qq空间转发不了</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#图片repeat重复问题"><span class="post-toc-number">2.0.4.</span> <span class="post-toc-text">图片repeat重复问题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#share页也要做分享，auth权限模块是异步执行的"><span class="post-toc-number">2.0.5.</span> <span class="post-toc-text">share页也要做分享，auth权限模块是异步执行的</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#微博下的视频问题"><span class="post-toc-number">2.0.6.</span> <span class="post-toc-text">微博下的视频问题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#gif在Android下会出现显示一段时间之后不显示，但是可以保存和转发-后端算法已解决，无需降级"><span class="post-toc-number">2.0.7.</span> <span class="post-toc-text">gif在Android下会出现显示一段时间之后不显示，但是可以保存和转发(后端算法已解决，无需降级)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#video-在微信下会显示内置的播放器"><span class="post-toc-number">2.0.8.</span> <span class="post-toc-text">video 在微信下会显示内置的播放器</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#iPhoneX在video问题"><span class="post-toc-number">2.0.9.</span> <span class="post-toc-text">iPhoneX在video问题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#尽量不要去用touchstart"><span class="post-toc-number">2.0.10.</span> <span class="post-toc-text">尽量不要去用touchstart</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#在开发要尽可能模块化"><span class="post-toc-number">2.0.11.</span> <span class="post-toc-text">在开发要尽可能模块化</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码要尽可能简洁，能优化的逻辑尽可能优化，以后要全使用ES6！！ES6！！！！"><span class="post-toc-number">2.0.12.</span> <span class="post-toc-text">代码要尽可能简洁，能优化的逻辑尽可能优化，以后要全使用ES6！！ES6！！！！</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#在移动端的话最好不要去用flexbox"><span class="post-toc-number">2.0.13.</span> <span class="post-toc-text">在移动端的话最好不要去用flexbox</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#视频播放延迟问题-后端算法已解决"><span class="post-toc-number">2.0.14.</span> <span class="post-toc-text">视频播放延迟问题(后端算法已解决)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ios低端机下gif保存为静态-ios早些版本的问题，目前无解"><span class="post-toc-number">2.0.15.</span> <span class="post-toc-text">ios低端机下gif保存为静态(ios早些版本的问题，目前无解)</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#之后-不对！现在"><span class="post-toc-number"></span> <span class="post-toc-text">之后(不对！现在~~)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、调整好状态，充满激情才是我！！"><span class="post-toc-number">0.1.</span> <span class="post-toc-text">1、调整好状态，充满激情才是我！！</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、-专心于学习"><span class="post-toc-number">0.2.</span> <span class="post-toc-text">2、 专心于学习</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2018-如何把自我学习和工作时间分配弄好？-粗略"><span class="post-toc-number">0.2.1.</span> <span class="post-toc-text">2018 如何把自我学习和工作时间分配弄好？ (粗略)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#书-要看完"><span class="post-toc-number">0.2.2.</span> <span class="post-toc-text">书 [要看完]</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3、做好毕设、顺利毕业"><span class="post-toc-number">0.3.</span> <span class="post-toc-text">3、做好毕设、顺利毕业</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4、好好吃饭，好好睡觉，好好生活"><span class="post-toc-number">0.4.</span> <span class="post-toc-text">4、好好吃饭，好好睡觉，好好生活</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#结语"><span class="post-toc-number"></span> <span class="post-toc-text">结语</span></a>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                实习&andyMove小结
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>黄明照</strong>
+        <span>3月 06, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/H5项目/">H5项目</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/美图/">美图</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=实习&amp;andyMove小结&url=http://www.huangmingzhao.cn/practice-summary-andy-move2.html&pic=http://www.huangmingzhao.cn/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=实习&amp;andyMove小结&url=http://www.huangmingzhao.cn/practice-summary-andy-move2.html&via=黄明照" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://www.huangmingzhao.cn/practice-summary-andy-move2.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://www.huangmingzhao.cn/practice-summary-andy-move2.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>这学期的实习也快结束了，想想还是挺感慨的。这次对andyMove的总结就当做对自己这学期实习的总结吧。</p>
+<p>在美图也快满4个月了，总感觉自己进步的非常慢，有时候会在想是不是自己变得不上心了？变得不进取了？对！！你就是不进取了，松懈了！！不，这完全不是我！！！！当然在这四个月里或多或少还是比刚进美图的时候有所收获。从刚开始什么都不太懂的情况下开始的第一个H5,到现在相对比较清楚的开发(bug满天飞)。真的非常感谢有这个平台让我更加清楚的看清自己的不足，在这里真的非常感谢板栗兄一对一的辅导，自己的渣技术对他造成的不便深感自责。非常感谢晓东兄照顾~~</p>
+<h2 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h2><ul>
+<li><p>不管做什么事，<strong>细节</strong>真的很重要，在开发中，正如晓东说的多去注意一些细节的东西，这个项目就会更好，不要马虎的去对待它，比如动画微调的时候比较麻烦，一旦你马虎应付的话，细节处理不到位，动画不写反而会比较好！！说的就是你要细心！！多注意~~</p>
+</li>
+<li><p>在开发<strong>效率</strong>方面真的需要再提升提升，比如像一些比较麻烦的animation动画可以先不用处理，写animation有时候真的会挺花费时间的，导致于项目进展的比较慢，有可能会误期，所以可以先把项目做出来，把项目先跑通，逻辑处理好了再去处理animation等等。</p>
+</li>
+<li><p><strong>代码方面</strong>正如晓东说的目前自己写的 <strong>代码</strong>可能还是比较面条化，没有很好的去优化，重复性太强，没有模块化</p>
+</li>
+<li><p><strong>js css 没有模块化</strong>，要有<strong>模块化</strong>的思想，减少代码耦合，这一点非常非常重要！！！谨记！！！写到重复的代码的时候一点要想着怎么去优化！！！拿到PSD的时候<strong>不要马上就开始切</strong>，应该要想好好的想想如何去模块化，如何去布局，把逻辑理清楚，不然你会做很多无用功！！！</p>
+</li>
+<li><p><strong>bug修改方面</strong>提交测试版完之后测试便会开始测试逐步提交bug出来，要时常去<strong>关注jira</strong>上自己的bug，及时修复！！及时！！修复完毕一定要关闭bug给出合理的bug修复解释。bug修复时自己要先测一遍在提交给测试，可能有时候bug并未解决，导致于测试那边做无用功。[你还要不要脸害人家白忙活。。。]</p>
+</li>
+<li><p><strong>不要害怕麻烦</strong>在做lancome的时候需求的变动，让我觉得有些麻烦，故而就想到把需求砍掉，事后想想那时候的自己真的很垃圾，有什么问题就去解决，而不是想着如何不去解决！！</p>
+</li>
+<li><p><strong>依赖</strong>方面，能不麻烦别人的就不麻烦别人，坐在板栗旁边，有时候就产生了过度依赖的问题，一遇到bug自己不能解决的情况，就去问，[怪对不起板栗兄，真的超谢谢]，自己并没有好好想想自己如何解决，产生过度依赖。凡事一定要自己解决，自己解决！！！！</p>
+</li>
+<li><p>在<strong>沟通方面</strong>，态度谦和多沟通，不要把自己的情绪影响到别人，特别是产品运营设计测试这些大佬<del>~[[受奴才一跪</del>]</p>
+</li>
+</ul>
+<h2 id="BUG"><a href="#BUG" class="headerlink" title="BUG"></a>BUG</h2><p>下面是一些这次开发过程中出现的一些问题：</p>
+<h4 id="QQ平台，结果页不能滑动"><a href="#QQ平台，结果页不能滑动" class="headerlink" title="QQ平台，结果页不能滑动"></a>QQ平台，结果页不能滑动</h4><p>由于iOS下z-index的层级影响，导致于有些平台在ios下会很难出现滑动的情况(不顺畅),以及transition和animation同时使用ios端可能会出现问题</p>
+<p>目前解决方案:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">css:</span><br><span class="line"></span><br><span class="line">目前</span><br><span class="line">page&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 100%;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    //transition: transform .5s;</span><br><span class="line">    //opacity: 0;</span><br><span class="line">    overflow-x: hidden;</span><br><span class="line">    overflow-y: auto;</span><br><span class="line">    &amp;.transition&#123;</span><br><span class="line">        transition: all .3s;</span><br><span class="line">    &#125;</span><br><span class="line">    &amp;.show&#123;</span><br><span class="line">        transform: translateX(0);</span><br><span class="line">    &#125;</span><br><span class="line">    &amp;.hide-after&#123;</span><br><span class="line">        transform: translateX(100%);</span><br><span class="line">    &#125;</span><br><span class="line">    &amp;.hide-before&#123;</span><br><span class="line">        transform: translateX(-100%);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">之前</span><br><span class="line">page&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 100%;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    transition: transform .5s;</span><br><span class="line">    opacity: 0;</span><br><span class="line">    overflow-x: hidden;</span><br><span class="line">    overflow-y: auto;</span><br><span class="line">    &amp;.in &#123;</span><br><span class="line">        opacity: 1;</span><br><span class="line">        z-index: 2;</span><br><span class="line">        //animation: in 0.5s ease both;</span><br><span class="line">        //</span><br><span class="line">        //@keyframes in &#123;</span><br><span class="line">        //    0% &#123; opacity: 0; &#125;</span><br><span class="line">        //    100% &#123; opacity: 1; &#125;</span><br><span class="line">        //&#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &amp;.out &#123;</span><br><span class="line">        opacity: 0.5;</span><br><span class="line">        z-index: 1;</span><br><span class="line">        //transform: translateX(-100%);</span><br><span class="line">        //transition: all .5s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="上传完图片要进行预加载"><a href="#上传完图片要进行预加载" class="headerlink" title="上传完图片要进行预加载"></a>上传完图片要进行预加载</h4><p>在上传完图片生成url的时候一般都需要在接下来的页面中用到，故要对其进行预加载。在做帧动画更换图片的时候要注意，也是要预加载</p>
+<h4 id="ios秀秀端结果页转发qq和qq空间转发不了"><a href="#ios秀秀端结果页转发qq和qq空间转发不了" class="headerlink" title="ios秀秀端结果页转发qq和qq空间转发不了"></a>ios秀秀端结果页转发qq和qq空间转发不了</h4><p>这个要注意，在做拼接url的时候要对带有中文或者其他字符做encodeURIComponent处理，再到要用的地方(分享页)进行decodeURIComponent获取</p>
+<h4 id="图片repeat重复问题"><a href="#图片repeat重复问题" class="headerlink" title="图片repeat重复问题"></a>图片repeat重复问题</h4><p>js动态加上图片的时候要记得加上background-repeat:no-repeat，不要只加background-image</p>
+<h4 id="share页也要做分享，auth权限模块是异步执行的"><a href="#share页也要做分享，auth权限模块是异步执行的" class="headerlink" title="share页也要做分享，auth权限模块是异步执行的"></a>share页也要做分享，auth权限模块是异步执行的</h4><p>在share页的时候一般也要加上分享，auth权限模块是异步执行的~~</p>
+<h4 id="微博下的视频问题"><a href="#微博下的视频问题" class="headerlink" title="微博下的视频问题"></a>微博下的视频问题</h4><p>微博下视频默认是全屏播放的，点击返回视频在没有控制条control的情况下会不能再次播放，因此在weibo下要加上control</p>
+<h4 id="gif在Android下会出现显示一段时间之后不显示，但是可以保存和转发-后端算法已解决，无需降级"><a href="#gif在Android下会出现显示一段时间之后不显示，但是可以保存和转发-后端算法已解决，无需降级" class="headerlink" title="gif在Android下会出现显示一段时间之后不显示，但是可以保存和转发(后端算法已解决，无需降级)"></a>gif在Android下会出现显示一段时间之后不显示，但是可以保存和转发(后端算法已解决，无需降级)</h4><p>此次采用降级的方案，直接放图片，子元素gif的opacity为0</p>
+<h4 id="video-在微信下会显示内置的播放器"><a href="#video-在微信下会显示内置的播放器" class="headerlink" title="video 在微信下会显示内置的播放器"></a>video 在微信下会显示内置的播放器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;video class=&quot;js-video&quot;</span><br><span class="line">        loop</span><br><span class="line">        airplay=&quot;allow&quot;</span><br><span class="line">        x5-playsinline</span><br><span class="line">        playsinline</span><br><span class="line">        webkit-playsinline</span><br><span class="line">        preload=&quot;auto&quot;</span><br><span class="line">&gt;</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="iPhoneX在video问题"><a href="#iPhoneX在video问题" class="headerlink" title="iPhoneX在video问题"></a>iPhoneX在video问题</h4><p>iPhoneX的video在有poster的情况下，播放视频poster不会自动去掉，要自己逻辑手动去掉poster</p>
+<h4 id="尽量不要去用touchstart"><a href="#尽量不要去用touchstart" class="headerlink" title="尽量不要去用touchstart"></a>尽量不要去用touchstart</h4><p>touchstart时间间隔太小，有可能不会生效，一般使用tap，click，touchend，而touchstart主要用于事件状态方面</p>
+<h4 id="在开发要尽可能模块化"><a href="#在开发要尽可能模块化" class="headerlink" title="在开发要尽可能模块化"></a>在开发要尽可能模块化</h4><p>对于css也是，类似的css可以抽出模块，js更是，逻辑尽可能写成模块</p>
+<h4 id="代码要尽可能简洁，能优化的逻辑尽可能优化，以后要全使用ES6！！ES6！！！！"><a href="#代码要尽可能简洁，能优化的逻辑尽可能优化，以后要全使用ES6！！ES6！！！！" class="headerlink" title="代码要尽可能简洁，能优化的逻辑尽可能优化，以后要全使用ES6！！ES6！！！！"></a>代码要尽可能简洁，能优化的逻辑尽可能优化，以后要全使用ES6！！ES6！！！！</h4><h4 id="在移动端的话最好不要去用flexbox"><a href="#在移动端的话最好不要去用flexbox" class="headerlink" title="在移动端的话最好不要去用flexbox"></a>在移动端的话最好不要去用flexbox</h4><p>flexbox的兼容性性目前还是不够好，尽量去克服这个习惯</p>
+<h4 id="视频播放延迟问题-后端算法已解决"><a href="#视频播放延迟问题-后端算法已解决" class="headerlink" title="视频播放延迟问题(后端算法已解决)"></a>视频播放延迟问题(后端算法已解决)</h4><h4 id="ios低端机下gif保存为静态-ios早些版本的问题，目前无解"><a href="#ios低端机下gif保存为静态-ios早些版本的问题，目前无解" class="headerlink" title="ios低端机下gif保存为静态(ios早些版本的问题，目前无解)"></a>ios低端机下gif保存为静态(ios早些版本的问题，目前无解)</h4><h1 id="之后-不对！现在"><a href="#之后-不对！现在" class="headerlink" title="之后(不对！现在~~)"></a>之后(不对！现在~~)</h1><h3 id="1、调整好状态，充满激情才是我！！"><a href="#1、调整好状态，充满激情才是我！！" class="headerlink" title="1、调整好状态，充满激情才是我！！"></a>1、调整好状态，充满激情才是我！！</h3><h3 id="2、-专心于学习"><a href="#2、-专心于学习" class="headerlink" title="2、 专心于学习"></a>2、 专心于学习</h3><p>买了书买了椅子买了显示器，对！！就是要读书！！哈哈哈<br>这是在春节放假前自己给过年回来的自己定下的学习</p>
+<h4 id="2018-如何把自我学习和工作时间分配弄好？-粗略"><a href="#2018-如何把自我学习和工作时间分配弄好？-粗略" class="headerlink" title="2018 如何把自我学习和工作时间分配弄好？ (粗略)"></a>2018 如何把自我学习和工作时间分配弄好？ (粗略)</h4><ul>
+<li>周一-周五： 上班 — 6点半下班，利用好上班的时间处理好，吃完饭回去</li>
+<li>没任务的时候如何处理？ 1、主动请求加任务  2、像这个时候？ 在公司看书又不好….写东                          西？写插件？<br>增加表现机会，不会的先接，接完不会的再问<br>,不会的自己要先思考再问，不要一不懂就问</li>
+<li><p>周六周日： 全看书和处理毕业设计， 晚上有时间再回学校</p>
+</li>
+<li><p>生活： 买个显示器、买个椅子、家里打扫干净、自己做饭</p>
+</li>
+</ul>
+<h4 id="书-要看完"><a href="#书-要看完" class="headerlink" title="书 [要看完]"></a>书 [要看完]</h4><ul>
+<li>ES6 [es6还是很薄弱]</li>
+<li>深入浅出Webpack</li>
+<li>Web高效编程与优化实践</li>
+<li>体系设计与实践</li>
+<li>Vue</li>
+<li>Web前端高效开发</li>
+<li>微信小程序</li>
+</ul>
+<h3 id="3、做好毕设、顺利毕业"><a href="#3、做好毕设、顺利毕业" class="headerlink" title="3、做好毕设、顺利毕业"></a>3、做好毕设、顺利毕业</h3><h3 id="4、好好吃饭，好好睡觉，好好生活"><a href="#4、好好吃饭，好好睡觉，好好生活" class="headerlink" title="4、好好吃饭，好好睡觉，好好生活"></a>4、好好吃饭，好好睡觉，好好生活</h3><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p><strong>注: 博客是放假前写的，那时候本来打算这学期请假的</strong></p>
+<p>请假了，想想还是挺纠结的，想了好久，也是这段的实习让我看到了自己身上各个方面的不足，也借请假期间好好再充电充电，调整调整心态。2018想想应该会是一个充实的一年，想做的事情很多，希望自己能够把它过的充实，善待于它。</p>
+<p>美图，6月份再见！希望来时是一个不一样的自己。</p>
+<p><strong>更正如下:</strong></p>
+<p>晓东说明天有个总结会，不知道拿这篇博客去会怎么样，写博客都是写心声，内心对自己过去否定以及对接下来充满期待的总结我想最能说明现在的我。应该可以吧，就这样吧~~</p>
+<p>那个在新年前无数幻想着新的一年我该如何如何努力的少年希望你在新的一年勇往直前，不辜负那个幻想的少年。</p>
+<blockquote>
+<p>也许过去的一年，你曾被风浪拍打的颓废失意，但新的一年，愿你乘风破浪。  ——《乘风破浪》</p>
+</blockquote>
+<p>更新于 2018-03-01 00: 17<br>于自己的小窝</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/particle-canvas.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="黄明照's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        youremail@email.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>黄明照--一个在路上慢慢行走的前端人
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
