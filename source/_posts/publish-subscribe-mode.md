@@ -4,7 +4,7 @@ date: 2018-02-23 23:10:01
 comments: true
 
 tags:
-    - js
+    - JavaScript
 categories:
      - 渣技术
 ---

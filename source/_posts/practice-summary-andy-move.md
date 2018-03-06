@@ -105,7 +105,7 @@ page{
 在上传完图片生成url的时候一般都需要在接下来的页面中用到，故要对其进行预加载。在做帧动画更换图片的时候要注意，也是要预加载
 
 #### ios秀秀端结果页转发qq和qq空间转发不了
-这个要注意，在做拼接url的时候要对带有中文或者其他字符做encodeURIComponent处理，再到要用的地方(分享页)进行decodeURIComponent获取
+这个要注意，在做拼接url的时候要对带有中文或者其他字符做encodeURIComponent处理，再到要用的地方(分享页)进行decodeURIComponent获取，上次在群里面看到share的imageURL为空或者这个图片太大的话在端内分享qq也会调不起来
 
 #### 图片repeat重复问题
 js动态加上图片的时候要记得加上background-repeat:no-repeat，不要只加background-image
