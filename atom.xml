@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.huangmingzhao.cn/"/>
-  <updated>2018-03-02T08:54:43.000Z</updated>
+  <updated>2018-03-06T06:04:34.000Z</updated>
   <id>http://www.huangmingzhao.cn/</id>
   
   <author>
@@ -17,28 +17,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>实习&amp;andyMove小结</title>
-    <link href="http://www.huangmingzhao.cn/practice-summary-andy-move2.html"/>
-    <id>http://www.huangmingzhao.cn/practice-summary-andy-move2.html</id>
-    <published>2018-03-06T09:01:01.000Z</published>
-    <updated>2018-03-02T08:54:43.000Z</updated>
+    <title>video标签移动端兼容性问题总结</title>
+    <link href="http://www.huangmingzhao.cn/video-compatible.html"/>
+    <id>http://www.huangmingzhao.cn/video-compatible.html</id>
+    <published>2018-03-06T06:01:01.000Z</published>
+    <updated>2018-03-06T06:04:34.000Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;这学期的实习也快结束了，想想还是挺感慨的。这次对andyMove的总结就当做对自己这学期实习的总结吧。&lt;/p&gt;
-&lt;p&gt;在美图也快满4个月了，总感觉自己进步的非常慢，有时候会在想是不是自己变得不上心了？变得不进取了？对！！你就是不进取了，松懈了！！不，这完全不是我！！！！当然
-      
+      &lt;p&gt;由于video标签在各个平台下存在的各种各样的兼容性问题，遇到了各种坑，目前总结了下篇，待更新~~&lt;/p&gt;
     
     </summary>
     
       <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="美图" scheme="http://www.huangmingzhao.cn/tags/%E7%BE%8E%E5%9B%BE/"/>
+      <category term="video" scheme="http://www.huangmingzhao.cn/tags/video/"/>
     
-      <category term="H5项目" scheme="http://www.huangmingzhao.cn/tags/H5%E9%A1%B9%E7%9B%AE/"/>
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.huangmingzhao.cn/practice-summary-andy-move2.html"/>
+    <id>http://www.huangmingzhao.cn/practice-summary-andy-move2.html</id>
+    <published>2018-03-02T12:22:24.000Z</published>
+    <updated>2018-03-02T12:22:24.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;p&gt;title: 实习&amp;amp;andyMove小结&lt;br&gt;date: 2018-03-06 17:01:01&lt;br&gt;comments: true&lt;/p&gt;
+&lt;p&gt;tags:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- 美图
+- H5项目
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;cate
+      
+    
+    </summary>
+    
     
   </entry>
   
@@ -96,8 +114,8 @@
     <title>ClipImage 基于canvas截图工具</title>
     <link href="http://www.huangmingzhao.cn/ClipImage.html"/>
     <id>http://www.huangmingzhao.cn/ClipImage.html</id>
-    <published>2018-02-27T09:38:01.000Z</published>
-    <updated>2018-03-02T07:24:41.000Z</updated>
+    <published>2018-02-26T14:01:01.000Z</published>
+    <updated>2018-03-03T03:06:18.000Z</updated>
     
     <summary type="html">
     
@@ -141,7 +159,7 @@
     <link href="http://www.huangmingzhao.cn/publish-subscribe-mode.html"/>
     <id>http://www.huangmingzhao.cn/publish-subscribe-mode.html</id>
     <published>2018-02-23T15:10:01.000Z</published>
-    <updated>2018-03-02T07:24:41.000Z</updated>
+    <updated>2018-03-06T05:58:51.000Z</updated>
     
     <summary type="html">
     
@@ -156,7 +174,7 @@
       <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="js" scheme="http://www.huangmingzhao.cn/tags/js/"/>
+      <category term="JavaScript" scheme="http://www.huangmingzhao.cn/tags/JavaScript/"/>
     
   </entry>
   

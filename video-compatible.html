@@ -43,7 +43,7 @@
     
     <title>
         
-            标签: FileAPI | 
+            video标签移动端兼容性问题总结 | 
         
         黄明照--一个在路上慢慢行走的前端人
     </title>
@@ -53,8 +53,8 @@
     <link rel="icon" href="/img/favicon.png">
 
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="黄明照、黄明照的个人博客、黄明照的个人网站、一个在路上慢慢行走的前端人">
-    <meta name="keywords" content="">
+    <meta name="description" itemprop="description" content="由于video标签在各个平台下存在的各种各样的兼容性问题，遇到了各种坑，目前总结了下篇，待更新~~">
+    <meta name="keywords" content=",video">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="黄明照--一个在路上慢慢行走的前端人">
-    <meta name="msapplication-starturl" content="http://www.huangmingzhao.cn/tags/FileAPI/">
+    <meta name="msapplication-starturl" content="http://www.huangmingzhao.cn/video-compatible.html">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="黄明照--一个在路上慢慢行走的前端人">
@@ -230,13 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://www.huangmingzhao.cn/tags/FileAPI/">
+    <meta property="og:url" content="http://www.huangmingzhao.cn/video-compatible.html">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: FileAPI | 黄明照--一个在路上慢慢行走的前端人">
+    <meta property="og:title" content="video标签移动端兼容性问题总结 | 黄明照--一个在路上慢慢行走的前端人">
     <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="黄明照、黄明照的个人博客、黄明照的个人网站、一个在路上慢慢行走的前端人">
-    
+    <meta property="og:description" content="由于video标签在各个平台下存在的各种各样的兼容性问题，遇到了各种坑，目前总结了下篇，待更新~~">
+    <meta property="og:article:tag" content="video"> 
 
+    
+        <meta property="article:published_time" content="Tue Mar 06 2018 14:01:01 GMT+0800">
+        <meta property="article:modified_time" content="Tue Mar 06 2018 14:04:34 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -244,13 +247,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://www.huangmingzhao.cn/tags/FileAPI/index.html" />
+        <link rel="canonical" href="http://www.huangmingzhao.cn/video-compatible.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://www.huangmingzhao.cn/video-compatible.html",
+    "headline": "video标签移动端兼容性问题总结",
+    "datePublished": "Tue Mar 06 2018 14:01:01 GMT+0800",
+    "dateModified": "Tue Mar 06 2018 14:04:34 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "黄明照",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "黄明照--一个在路上慢慢行走的前端人",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",video",
+    "description": "由于video标签在各个平台下存在的各种各样的兼容性问题，遇到了各种坑，目前总结了下篇，待更新~~",
+}
+</script>
 
 
     
@@ -284,105 +317,239 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-        
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#微信下内置的播放器"><span class="post-toc-number">1.</span> <span class="post-toc-text">微信下内置的播放器</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#安卓微信下不能自动播放"><span class="post-toc-number">2.</span> <span class="post-toc-text">安卓微信下不能自动播放</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#safari下无法自动播放"><span class="post-toc-number">3.</span> <span class="post-toc-text">safari下无法自动播放</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#video的poster的问题"><span class="post-toc-number">4.</span> <span class="post-toc-text">video的poster的问题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#黑屏问题"><span class="post-toc-number">5.</span> <span class="post-toc-text">黑屏问题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#微博下的视频问题"><span class="post-toc-number">6.</span> <span class="post-toc-text">微博下的视频问题</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/ClipImageDemo-FileAPI.html">Html5 File API 与 ClipImage结合 Demo</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            用ClipImage和File Api 写的一个截图小🌰
-
-example
-
-
-github
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/ClipImageDemo-FileAPI.html" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="黄明照's avatar">
-            </div>
-            <div>
-                <strong>黄明照</strong>
-                <span>2月 27, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/渣技术/">渣技术</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                video标签移动端兼容性问题总结
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>黄明照</strong>
+        <span>3月 06, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/video/">video</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=video标签移动端兼容性问题总结&url=http://www.huangmingzhao.cn/video-compatible.html&pic=http://www.huangmingzhao.cn/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=video标签移动端兼容性问题总结&url=http://www.huangmingzhao.cn/video-compatible.html&via=黄明照" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://www.huangmingzhao.cn/video-compatible.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://www.huangmingzhao.cn/video-compatible.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>由于video标签在各个平台下存在的各种各样的兼容性问题，遇到了各种坑，目前总结了下篇，待更新~~</p>
+<a id="more"></a>
+<h4 id="微信下内置的播放器"><a href="#微信下内置的播放器" class="headerlink" title="微信下内置的播放器"></a>微信下内置的播放器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;video class=&quot;js-video&quot;</span><br><span class="line">        loop</span><br><span class="line">        airplay=&quot;allow&quot;</span><br><span class="line">        x5-playsinline /**/</span><br><span class="line">        playsinline /*IOS微信浏览器支持小播放*/ </span><br><span class="line">        webkit-playsinline /*这个属性是ios 10中设置可以让视频在小窗内播放，也就是不是全屏播放*/  </span><br><span class="line">        preload=&quot;auto&quot; /*预加载*/</span><br><span class="line">&gt;</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="安卓微信下不能自动播放"><a href="#安卓微信下不能自动播放" class="headerlink" title="安卓微信下不能自动播放"></a>安卓微信下不能自动播放</h4><p>安卓微信下autoplay无效，不能自动播放，可以通过<strong>用户交互进行手动播放</strong>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//在安卓微信下</span><br><span class="line">$(&apos;body&apos;).one(&apos;touchstart&apos;, function () &#123;</span><br><span class="line">    //ios微信下可以自动播放</span><br><span class="line">    if (is.iOS) &#123;</span><br><span class="line">         return;</span><br><span class="line">    </span><br><span class="line">    $(&apos;.video-icon&apos;).hide()</span><br><span class="line">    $(&apos;.js-video&apos;)[0].play();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h4 id="safari下无法自动播放"><a href="#safari下无法自动播放" class="headerlink" title="safari下无法自动播放"></a>safari下无法自动播放</h4><p>在safari下，autoplay也无效，在iphone上做测试，发现autoplay属性在safari里无效，苹果对video标签的autoplay属性做了如下规定：</p>
+<blockquote>
+<p>In Safari on iOS (for all devices, including iPad), where the user may be on a cellular network and be charged per data unit, preload and autoplay are disabled.</p>
+</blockquote>
+<p>其实safari的并不是autoplay的问题，而是视频有声音导致于safari不能自动播放，<strong>给video的muted[是否静音]设置为true</strong>，视频便会自动播放，但是视频没有声音(降级处理)</p>
+<p>safari下，设置muted为true<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//safari下</span><br><span class="line">if(is.safari)&#123;</span><br><span class="line">   $(&apos;.js-video&apos;)[0].play();</span><br><span class="line">    $(&apos;.js-video&apos;)[0].muted = true; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="video的poster的问题"><a href="#video的poster的问题" class="headerlink" title="video的poster的问题"></a>video的poster的问题</h4><ul>
+<li>在安卓的有些机子下，给video增加了poster，但是还是没有效果，poster在android兼容的并不好，不如在视频上层加个div铺张图片</li>
+<li>iPhoneX的video在有poster的情况下，播放视频poster不会自动去掉，要自己逻辑手动去掉poster(之前测到过)</li>
+</ul>
+<h4 id="黑屏问题"><a href="#黑屏问题" class="headerlink" title="黑屏问题"></a>黑屏问题</h4><p>部分环境中视频从开始播到能展现画面会有短暂的黑屏（处理视频源数据的时间），为了避免这个黑屏，可以在视频上加个浮层或设置容器背景并在播放前隐藏video，然后监听相关事件，开始播放或认为有画面的时候再切换到Video界面。</p>
+<p>解决方案<br>微信下，通过用户交互进行播放，最好给他一个播放小icon</p>
+<h4 id="微博下的视频问题"><a href="#微博下的视频问题" class="headerlink" title="微博下的视频问题"></a>微博下的视频问题</h4><p>对于小视频为了美观，一般都是把control属性拿掉，而在微博下视频默认是全屏播放的，点击返回视频在没有控制条control的情况下会不能再次播放，因此在weibo下要加上control</p>
+<p>解决方案：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(is.Weibo)&#123;</span><br><span class="line">    $(&apos;.js-video&apos;)[0].control = true; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>   　　　　　　   
+   　　　　　　                        
+   　　　　　　       </p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/practice-summary-andy-move2.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -528,6 +695,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
