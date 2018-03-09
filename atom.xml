@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.huangmingzhao.cn/"/>
-  <updated>2018-03-06T06:04:34.000Z</updated>
+  <updated>2018-03-09T16:37:33.000Z</updated>
   <id>http://www.huangmingzhao.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTTP缓存策略与增量更新总结</title>
+    <link href="http://www.huangmingzhao.cn/HTTP%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5%E4%B8%8E%E5%A2%9E%E9%87%8F%E6%9B%B4%E6%96%B0.html"/>
+    <id>http://www.huangmingzhao.cn/HTTP缓存策略与增量更新.html</id>
+    <published>2018-03-09T14:31:01.000Z</published>
+    <updated>2018-03-09T16:37:33.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;合理的利用缓存是web性能优化的必要手段，对于咱们前端来说所接触的主要缓存策略是针对客户端浏览器，客户端的缓存可以分为两种:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt;  利用本地存储， 比如localStorage、SessionStorage等&lt;/p&gt;
+&lt;p&gt;
+      
+    
+    </summary>
+    
+      <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="缓存" scheme="http://www.huangmingzhao.cn/tags/%E7%BC%93%E5%AD%98/"/>
+    
+  </entry>
   
   <entry>
     <title>video标签移动端兼容性问题总结</title>
