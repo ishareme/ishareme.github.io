@@ -44,7 +44,14 @@
   </url>
   
   <url>
-    <loc>http://www.huangmingzhao.cn/Express-mongoose-stu-management.html</loc>
+    <loc>http://www.huangmingzhao.cn/canvas-api.html</loc>
+    
+    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.huangmingzhao.cn/tags/index.html</loc>
     
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     
@@ -65,35 +72,7 @@
   </url>
   
   <url>
-    <loc>http://www.huangmingzhao.cn/meitu-item-two.html</loc>
-    
-    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.huangmingzhao.cn/tags/index.html</loc>
-    
-    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.huangmingzhao.cn/timeline/index.html</loc>
-    
-    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.huangmingzhao.cn/particle-canvas.html</loc>
-    
-    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.huangmingzhao.cn/the-use-of-pm2.html</loc>
+    <loc>http://www.huangmingzhao.cn/meitu-item-one.html</loc>
     
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     
@@ -107,6 +86,27 @@
   </url>
   
   <url>
+    <loc>http://www.huangmingzhao.cn/particle-canvas.html</loc>
+    
+    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.huangmingzhao.cn/Express-mongoose-stu-management.html</loc>
+    
+    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.huangmingzhao.cn/timeline/index.html</loc>
+    
+    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.huangmingzhao.cn/JavaScript01.html</loc>
     
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
@@ -114,7 +114,7 @@
   </url>
   
   <url>
-    <loc>http://www.huangmingzhao.cn/canvas-api.html</loc>
+    <loc>http://www.huangmingzhao.cn/the-use-of-pm2.html</loc>
     
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     
@@ -142,7 +142,7 @@
   </url>
   
   <url>
-    <loc>http://www.huangmingzhao.cn/meitu-item-one.html</loc>
+    <loc>http://www.huangmingzhao.cn/meitu-item-two.html</loc>
     
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     
