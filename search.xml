@@ -398,6 +398,12 @@
   
     
     <entry>
+      <title>gallery</title>
+      <link href="/gallery/index.html"/>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+    <entry>
       <title>links</title>
       <link href="/links/index.html"/>
       <content type="html"><![CDATA[]]></content>
@@ -406,12 +412,6 @@
     <entry>
       <title>tags</title>
       <link href="/tags/index.html"/>
-      <content type="html"><![CDATA[]]></content>
-    </entry>
-    
-    <entry>
-      <title>gallery</title>
-      <link href="/gallery/index.html"/>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
