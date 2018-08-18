@@ -3,9 +3,9 @@
   
     
     <entry>
-      <title>HTTP缓存策略与增量更新总结</title>
-      <link href="/HTTP%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5%E4%B8%8E%E5%A2%9E%E9%87%8F%E6%9B%B4%E6%96%B0.html"/>
-      <content type="html"><![CDATA[<p>合理的利用缓存是web性能优化的必要手段，对于咱们前端来说所接触的主要缓存策略是针对客户端浏览器，客户端的缓存可以分为两种:</p><p><strong>1.</strong>  利用本地存储， 比如localStorage、SessionStorage等</p><p><strong>2.</strong>  利用HTTP缓存策略，其中又分为强制缓存和协商缓存</p><p>现在就来总结下HTTP缓存策略。HTTP缓存需要服务器配合，比如Apache、Ngnix等服务器软件可以为资源设置不同的HTTP缓存策略。增量更新是目前普遍采用的缓存更新方案，结合HTTP强制缓存策略，能够保证用户第一时间获取最新资源，又可以减少网络资源消耗，提高web应用程序的执行速度。</p><h4 id="HTTP缓存策略"><a href="#HTTP缓存策略" class="headerlink" title="HTTP缓存策略"></a>HTTP缓存策略</h4><p>浏览器对静态资源的缓存其实本质上是HTTP协议的缓存策略，其中又可分为强制缓存策略和协商缓存策略。</p><p><strong>强制缓存策略：</strong>  根据过期时间决定使用本地缓存还是请求新资源。</p><p><strong>协商缓存策略：</strong>  每次都会发出请求，经过服务器对比后决定采用本地缓存还是新资源。</p><p>具体采用哪种策略是由HTTP协议的<strong>头部</strong>信息决定</p><h5 id="1-Expires-和-max-age"><a href="#1-Expires-和-max-age" class="headerlink" title="1. Expires 和 max-age"></a>1. Expires 和 max-age</h5><p>Expires和max-age是强制缓存策略的关键信息。</p><p><strong>Expires</strong> 通过指定一个明确的时间点作为缓存资源的过期时间，在这个时间点之前将使用本地缓存的文件应答请求，不会向服务器发起实体请求(返回状态码200)<br>Expires的有点是可以在缓存的过期时间内减少客户端的HTTP请求，不仅节省了客户端处理时间和提高了web应用的执行速度，而且也减少了服务器负载和客户端网络资源的消耗。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expires:Fri, 09 Mar 2018 14:14:54 GMT</span><br></pre></td></tr></table></figure></p><p>不过！！！Expires有一个致命的缺陷： 它所指的时间点是以服务器为准的时间，但是客户端进行过期判断的时候是将本地的时间与此时间点进行判断的。举个🌰： 如果服务器的时间是 2018年3月10日 14:14:54， 而客户端的时间是 2018年3月10日 22:14:54 ， 那么这时通过Expires控制的缓存将会失效，客户端会发起实体请求获取对应资源。（客户端动态设置时间或服务端的时间存在时间差）这显然是不合理的。</p><p>于是乎！！！在Expires之后又来了一个玩意，<strong>Cache-control</strong>。以便更精准的控制缓存。Cache-control的采用信息如下:</p><ul><li><strong>no-cache 和 no-store</strong>：no-cache并非禁止缓存，而是需要先与服务端确认返回的响应是否发生变化，如果资源没有发生变化，就可以使用缓存副本而避免下载。no-store是真正意义上的禁止缓存，禁止缓存资源的返回响应。</li><li><strong>public 和 private</strong>： public不太常用，意思是响应可以被浏览器缓存器无限期的缓存，通常是使用max-age指定精准的缓存时间。 private表示响应可以被浏览器缓存，但是不予许任何中间缓存器对其缓存。(不太明白😢~~)</li><li><strong>max-age</strong>： 指定从请求的时刻开始计算，此响应的缓存副本有效的最长时间(秒)。再举个🌰： “max-age=3600”表示浏览器在接下来的1个小时内使用此响应的本地缓存，不会发送实体请求到服务器。</li></ul><p><strong>max-age指定的是缓存的时间跨度，而非失效的时间点，不会受到服务器时间误差的影响。</strong> 所以，与Expires相比起来，max-age可以更精准的控制缓存，并且<strong>比Expires的优先级高</strong></p><p><img src="http://oubl6fzsm.bkt.clouddn.com/http-cache.png" alt="fistPost"></p><h5 id="2-Etag-和-if-none-match"><a href="#2-Etag-和-if-none-match" class="headerlink" title="2. Etag 和 if-none-match"></a>2. Etag 和 if-none-match</h5><p>Etag 是服务器为资源分配的字符串形式唯一性标识。 浏览器在<strong>cache-control指定的no-cache或者max-age和Expires均过期之后，将Etag值通过if-none-match作为请求首部信息发送给服务器</strong>，服务器接受到请求之后，对比请求资源的Etag是否发生变化，如果未改变将返回 304 Not Modified，并且根据既定的缓存策略分配新的cache-control信息，如果资源发生改变，则会返回最新的资源以及重新分配的Etag值。</p><p><strong>如果强制浏览器使用协商缓存策略，需要将cache-control首部信息设置为no-cache，这样便不会判断max-age和expires过期的时间，从而每次请求资源都会经过服务器对比。</strong></p><p>协商缓存并非是一种比强制缓存“低级”的策略，对于一些比较特殊的应用场景或资源，协商缓存优于强制缓存。再举个🌰， 非服务端渲染的html文档，由于它是所有静态资源的引用者，所以必须保证每次请求到的资源都是最新的。同时，为了保证服务器解析和保证网站的唯一性，html文件不能包含hash指纹，在这种场景只能使用协商缓存。(使用强制缓存的话，文件的修改，由于客户端存在缓存，导致于客户端浏览的是原先的代码，不是最新修改的)</p><h4 id="覆盖更新和增量更新"><a href="#覆盖更新和增量更新" class="headerlink" title="覆盖更新和增量更新"></a>覆盖更新和增量更新</h4><p>简单总结下覆盖更新和增量更新吧，覆盖更新和增量更新都是建立在浏览器启用强制缓存策略的前提下。</p><p><strong>覆盖更新:</strong> 覆盖更新的实现方案是在引用资源的URL后面添加请求参数(比如添加请求时间搓或hash值参数)，优于存在缺陷，逐渐被淘汰。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//通过添加hash指纹(md5算法)</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;main.home.css?v=858d5483&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure><p>覆盖更新存在的缺陷: </p><ol><li>必须保证html文件与改动的静态文件同步更新。 对于服务端渲染的项目，网站人口html和静态资源分开部署，静态资源的实现和动态资源的上线存在时间差。</li><li>不利于版本回滚</li></ol><p><strong>增量更新</strong>： 实现方案是将作为参数的hash值改为作为资源文件名的一部分并删除用于更新的url参数,解决了覆盖更新的两个缺陷。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//通过添加hash指纹(md5算法)</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;main.home.858d5483.css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure><h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>enen~~ 对！！就这样吧，收获不少~~感恩</p>]]></content>
+      <title>聊聊毕业设计系列 --- 项目介绍</title>
+      <link href="/%E8%81%8A%E8%81%8A%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1%E7%B3%BB%E5%88%97.html"/>
+      <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote><p>本论文对在移动互联网的大环境下，人们对阅读的需求和存在的问题以及发展趋势进行了深入分析研究之后，主要目的是设计一套简约优雅风格的UI，即UserInterface（用户界面），采用<code>Express</code>为Node.js的web开发框架，<code>Mongoose</code>模块来管理非关系型数据库MongoDB，在前端工程中主要运用了渐进式JavaScript框架<code>Vue.js</code>，使用<code>Vue-router</code>做前端页面路由的跳转，使用<code>Axios</code>作为HTTP请求库，同时使用<code>Vuex</code>负责前端全局状态管理，使用<code>ElementUI</code>作为界面基础组件库，使用<code>Webpack</code>进行模块化打包，并结合HTML5相关技术最终实现一个包含<strong>图文类、阅读类、影视类、音乐类和电台类五大版块的文艺类阅读系统</strong>，取名为<code>Moment</code>，意为片刻，旨在为人们提供一个平台，让人们在碎片化的时间里进行有效阅读。将实现系统中的两大主要部分：<strong>面向管理员和合作作者的后台管理系统</strong> 和 <strong>面向用户的移动端WebApp</strong>。        <br> <br>                      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;— 摘自本人论文</p></blockquote><p>好了好了，以上纯属装x，三流的学校三流的毕业设计，看官随意就好。引言中做了毕业设计项目的介绍，实现一个包含图文类、阅读类、影视类、音乐类和电台类五大版块的<strong>文艺类阅读系统</strong>，取名为<code>Moment</code>。主要运用到的技术栈有：</p><ul><li>Node.js — Express</li><li>MongoDB — Mongoose</li><li>Vue</li><li>Vue-router</li><li>Axios</li><li>Vuex</li><li>ElementUI</li><li>Socket.io</li><li>…</li></ul><p>在项目开始之前还很激动乘还是学生的时候在腾讯云上买了云服务器，注册了第二个域名<code>momentin.cn</code>，到后面部署上去发现接口请求太慢了，于是乎还是放弃了，其实最重要的还是bug多多哈哈哈，性能优化还没做好。不过后面会继续部署上线。</p><h1 id="系统业务分析"><a href="#系统业务分析" class="headerlink" title="系统业务分析"></a>系统业务分析</h1><p>作为一个文艺类阅读系统，最主要的目的就是为用户提供优质的阅读体验和丰富的阅读内容。从而，以此作为目标，本系统业务中对阅读文章的分类又分为图文类、阅读类、影视类、音乐类和电台类这五个版块，于目于耳对文章的形式进行多样化。又将整个文艺类阅读系统的业务划分为两大部分，分别是面向管理员和合作作者的后台管理系统和面向用户的移动端WebApp，系统的需求分析将围绕这两部分进行展开。</p><h2 id="面向用户的移动端WebApp"><a href="#面向用户的移动端WebApp" class="headerlink" title="面向用户的移动端WebApp"></a>面向用户的移动端WebApp</h2><p>面向用户的移动端WebApp最重要的业务是提供文章的阅读，这个业务是面向所有可使用系统的用户。当然考虑到用户不仅仅满足于阅读，也需要以文章作为媒介进行用户之间的社交性活动，因此系统增加了图文广场模块，类似于一个圈子，所有用户都可以发布图文及查看，再比如关注，互相评论等各种互动。社交性的操作后往往需要给用户一些提醒，不然将失去意义，而且必须保证这个提醒是实时的，所以需要对用户进行实时的消息推送。当然用户难免对文章本身进行操作，比如评论、点赞、收藏等操作。</p><h2 id="面向管理员和合作作者的后台管理系统"><a href="#面向管理员和合作作者的后台管理系统" class="headerlink" title="面向管理员和合作作者的后台管理系统"></a>面向管理员和合作作者的后台管理系统</h2><p>这个系统的管理，系统主要分为两种角色进行管理。系统管理员角色可以看到移动端WebApp整体数据情况，可以对用户进行管理包括合作作者和所有普通用户，以及可以对图文、阅读、影视、音乐、电台所有文章进行管理，并且可以对系统的其他模块进行管理，例如广告模块、轮播图模块、公告模块等。而作者角色的权限就相对比较少，仅包含对文章的管理。</p><p>注： 由于时间关系 WebApp整体数据情况这块，它的数据库字段是有，但是当时匆匆忙忙没时间写接口，目前以静态展示。系统管理这一块也没处理完毕。</p><h1 id="系统设计"><a href="#系统设计" class="headerlink" title="系统设计"></a>系统设计</h1><h2 id="系统架构设计"><a href="#系统架构设计" class="headerlink" title="系统架构设计"></a>系统架构设计</h2><p><img src="https://user-gold-cdn.xitu.io/2018/8/9/1651f1aeaf2894a8?w=613&amp;h=594&amp;f=png&amp;s=43570" alt="系统架构"></p><p>系统架构？？这么装逼的词哈哈哈哈，其实也就传统的B/S架构，前后端分离。前端通过发起ajax接口请求，web服务器对请求进行处理并操作数据库服务器，返回json格式数据到前端，前端拿到数据后，处理数据并进行渲染。</p><h2 id="功能模块设计"><a href="#功能模块设计" class="headerlink" title="功能模块设计"></a>功能模块设计</h2><p><img src="https://user-gold-cdn.xitu.io/2018/8/9/1651f235d31bd879?w=947&amp;h=659&amp;f=png&amp;s=96879" alt="功能模块"></p><p>这是当初项目开始前的一个粗略功能模块设计，其中一小部分模块由于当初时间关系还未做全，不过大部分功能模块已经实现。</p><h2 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h2><p>系统数据库的存储主要包含了：文章数据存储，用户数据存储，管理员和合作作者数据存储，文章评论存储，用户间关系存储。其中的文章数据存储又分为图文文章数据存储、阅读文章数据存储、影视文章数据存储、音乐文章数据存储、电台文章数据存储。其中的文章评论数据存储又分为阅读评论数据存储、影视评论数据存储、音乐评论数据存储、电台评论数据存储。</p><p><img src="https://user-gold-cdn.xitu.io/2018/8/18/1654d73d702c2790?w=843&amp;h=816&amp;f=png&amp;s=55313" alt="数据库设计"></p><h1 id="接下来"><a href="#接下来" class="headerlink" title="接下来"></a>接下来</h1><p>现在咱们也对项目做了个介绍，并且做了大概的系统分析和系统设计。那么接下来系列文章中会介绍到项目中主要的一些功能模块，或者说可拿出来与大家探讨的模块。本人水平一般，介绍的可能也是一些基础，见谅见谅，当时自己会继续努力~~</p>]]></content>
       
       <categories>
           
@@ -16,7 +16,47 @@
       
         <tags>
             
-            <tag> 缓存 </tag>
+            <tag> Express </tag>
+            
+            <tag> 毕业设计 </tag>
+            
+            <tag> Vue </tag>
+            
+            <tag> Node.js </tag>
+            
+            <tag> MongoDB </tag>
+            
+            <tag> Mongoose </tag>
+            
+            <tag> Sockit.io </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>HTTP缓存策略与增量更新总结</title>
+      <link href="/HTTP%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5%E4%B8%8E%E5%A2%9E%E9%87%8F%E6%9B%B4%E6%96%B0.html"/>
+      <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote><p>本论文对在移动互联网的大环境下，人们对阅读的需求和存在的问题以及发展趋势进行了深入分析研究之后，主要目的是设计一套简约优雅风格的UI，即UserInterface（用户界面），采用<code>Express</code>为Node.js的web开发框架，<code>Mongoose</code>模块来管理非关系型数据库MongoDB，在前端工程中主要运用了渐进式JavaScript框架<code>Vue.js</code>，使用<code>Vue-router</code>做前端页面路由的跳转，使用<code>Axios</code>作为HTTP请求库，同时使用<code>Vuex</code>负责前端全局状态管理，使用<code>ElementUI</code>作为界面基础组件库，使用<code>Webpack</code>进行模块化打包，并结合HTML5相关技术最终实现一个包含<strong>图文类、阅读类、影视类、音乐类和电台类五大版块的文艺类阅读系统</strong>，取名为<code>Moment</code>，意为片刻，旨在为人们提供一个平台，让人们在碎片化的时间里进行有效阅读。将实现系统中的两大主要部分：<strong>面向管理员和合作作者的后台管理系统</strong> 和 <strong>面向用户的移动端WebApp</strong>。        <br> <br>                      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;— 摘自本人论文</p></blockquote><p>好了好了，以上纯属装x，三流的学校三流的毕业设计，看官随意就好。引言中做了毕业设计项目的介绍，实现一个包含图文类、阅读类、影视类、音乐类和电台类五大版块的<strong>文艺类阅读系统</strong>，取名为<code>Moment</code>。主要运用到的技术栈有：</p><ul><li>Node.js — Express</li><li>MongoDB — Mongoose</li><li>Vue</li><li>Vue-router</li><li>Axios</li><li>Vuex</li><li>ElementUI</li><li>Socket.io</li><li>…</li></ul><p>在项目开始之前还很激动乘还是学生的时候在腾讯云上买了云服务器，注册了第二个域名<code>momentin.cn</code>，到后面部署上去发现接口请求太慢了，于是乎还是放弃了，其实最重要的还是bug多多哈哈哈，性能优化还没做好。不过后面会继续部署上线。</p><h1 id="系统业务分析"><a href="#系统业务分析" class="headerlink" title="系统业务分析"></a>系统业务分析</h1><p>作为一个文艺类阅读系统，最主要的目的就是为用户提供优质的阅读体验和丰富的阅读内容。从而，以此作为目标，本系统业务中对阅读文章的分类又分为图文类、阅读类、影视类、音乐类和电台类这五个版块，于目于耳对文章的形式进行多样化。又将整个文艺类阅读系统的业务划分为两大部分，分别是面向管理员和合作作者的后台管理系统和面向用户的移动端WebApp，系统的需求分析将围绕这两部分进行展开。</p><h2 id="面向用户的移动端WebApp"><a href="#面向用户的移动端WebApp" class="headerlink" title="面向用户的移动端WebApp"></a>面向用户的移动端WebApp</h2><p>面向用户的移动端WebApp最重要的业务是提供文章的阅读，这个业务是面向所有可使用系统的用户。当然考虑到用户不仅仅满足于阅读，也需要以文章作为媒介进行用户之间的社交性活动，因此系统增加了图文广场模块，类似于一个圈子，所有用户都可以发布图文及查看，再比如关注，互相评论等各种互动。社交性的操作后往往需要给用户一些提醒，不然将失去意义，而且必须保证这个提醒是实时的，所以需要对用户进行实时的消息推送。当然用户难免对文章本身进行操作，比如评论、点赞、收藏等操作。</p><h2 id="面向管理员和合作作者的后台管理系统"><a href="#面向管理员和合作作者的后台管理系统" class="headerlink" title="面向管理员和合作作者的后台管理系统"></a>面向管理员和合作作者的后台管理系统</h2><p>这个系统的管理，系统主要分为两种角色进行管理。系统管理员角色可以看到移动端WebApp整体数据情况，可以对用户进行管理包括合作作者和所有普通用户，以及可以对图文、阅读、影视、音乐、电台所有文章进行管理，并且可以对系统的其他模块进行管理，例如广告模块、轮播图模块、公告模块等。而作者角色的权限就相对比较少，仅包含对文章的管理。</p><p>注： 由于时间关系 WebApp整体数据情况这块，它的数据库字段是有，但是当时匆匆忙忙没时间写接口，目前以静态展示。系统管理这一块也没处理完毕。</p><h1 id="系统设计"><a href="#系统设计" class="headerlink" title="系统设计"></a>系统设计</h1><h2 id="系统架构设计"><a href="#系统架构设计" class="headerlink" title="系统架构设计"></a>系统架构设计</h2><p><img src="https://user-gold-cdn.xitu.io/2018/8/9/1651f1aeaf2894a8?w=613&amp;h=594&amp;f=png&amp;s=43570" alt="系统架构"></p><p>系统架构？？这么装逼的词哈哈哈哈，其实也就传统的B/S架构，前后端分离。前端通过发起ajax接口请求，web服务器对请求进行处理并操作数据库服务器，返回json格式数据到前端，前端拿到数据后，处理数据并进行渲染。</p><h2 id="功能模块设计"><a href="#功能模块设计" class="headerlink" title="功能模块设计"></a>功能模块设计</h2><p><img src="https://user-gold-cdn.xitu.io/2018/8/9/1651f235d31bd879?w=947&amp;h=659&amp;f=png&amp;s=96879" alt="功能模块"></p><p>这是当初项目开始前的一个粗略功能模块设计，其中一小部分模块由于当初时间关系还未做全，不过大部分功能模块已经实现。</p><h2 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h2><p>系统数据库的存储主要包含了：文章数据存储，用户数据存储，管理员和合作作者数据存储，文章评论存储，用户间关系存储。其中的文章数据存储又分为图文文章数据存储、阅读文章数据存储、影视文章数据存储、音乐文章数据存储、电台文章数据存储。其中的文章评论数据存储又分为阅读评论数据存储、影视评论数据存储、音乐评论数据存储、电台评论数据存储。</p><p><img src="https://user-gold-cdn.xitu.io/2018/8/18/1654d73d702c2790?w=843&amp;h=816&amp;f=png&amp;s=55313" alt="数据库设计"></p><h1 id="接下来"><a href="#接下来" class="headerlink" title="接下来"></a>接下来</h1><p>现在咱们也对项目做了个介绍，并且做了大概的系统分析和系统设计。那么接下来系列文章中会介绍到项目中主要的一些功能模块，或者说可拿出来与大家探讨的模块。本人水平一般，介绍的可能也是一些基础，见谅见谅，当时自己会继续努力~~</p>]]></content>
+      
+      <categories>
+          
+          <category> 渣技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Express </tag>
+            
+            <tag> 毕业设计 </tag>
+            
+            <tag> Vue </tag>
+            
+            <tag> Node.js </tag>
+            
+            <tag> MongoDB </tag>
             
         </tags>
       
@@ -358,12 +398,6 @@
   
     
     <entry>
-      <title>gallery</title>
-      <link href="/gallery/index.html"/>
-      <content type="html"><![CDATA[]]></content>
-    </entry>
-    
-    <entry>
       <title>links</title>
       <link href="/links/index.html"/>
       <content type="html"><![CDATA[]]></content>
@@ -372,6 +406,12 @@
     <entry>
       <title>tags</title>
       <link href="/tags/index.html"/>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+    <entry>
+      <title>gallery</title>
+      <link href="/gallery/index.html"/>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
