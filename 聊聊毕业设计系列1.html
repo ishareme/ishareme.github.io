@@ -45,7 +45,7 @@
     
     <title>
         
-            links | 
+            聊聊毕业设计系列 --- 项目介绍 | 
         
         黄明照--一个在路上慢慢行走的前端人
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="黄明照、黄明照的个人博客、黄明照的个人网站、一个在路上慢慢行走的前端人">
-    <meta name="keywords" content="黄明照、黄明照的个人博客、黄明照的个人网站、一个在路上慢慢行走的前端人">
+    <meta name="keywords" content="黄明照、黄明照的个人博客、黄明照的个人网站、一个在路上慢慢行走的前端人,Express,毕业设计,Vue,Node.js,MongoDB,Mongoose,Sockit.io">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -217,7 +217,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="黄明照--一个在路上慢慢行走的前端人">
-    <meta name="msapplication-starturl" content="http://www.huangmingzhao.cn/links/">
+    <meta name="msapplication-starturl" content="http://www.huangmingzhao.cn/聊聊毕业设计系列1.html">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="黄明照--一个在路上慢慢行走的前端人">
@@ -232,13 +232,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://www.huangmingzhao.cn/links/">
+    <meta property="og:url" content="http://www.huangmingzhao.cn/聊聊毕业设计系列1.html">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="links | 黄明照--一个在路上慢慢行走的前端人">
+    <meta property="og:title" content="聊聊毕业设计系列 --- 项目介绍 | 黄明照--一个在路上慢慢行走的前端人">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="黄明照、黄明照的个人博客、黄明照的个人网站、一个在路上慢慢行走的前端人">
-    
+    <meta property="og:article:tag" content="Express"> <meta property="og:article:tag" content="毕业设计"> <meta property="og:article:tag" content="Vue"> <meta property="og:article:tag" content="Node.js"> <meta property="og:article:tag" content="MongoDB"> <meta property="og:article:tag" content="Mongoose"> <meta property="og:article:tag" content="Sockit.io"> 
 
+    
+        <meta property="article:published_time" content="Sat Aug 18 2018 22:53:01 GMT+0800">
+        <meta property="article:modified_time" content="Sun Aug 26 2018 23:52:16 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -246,13 +249,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://www.huangmingzhao.cn/links/index.html" />
+        <link rel="canonical" href="http://www.huangmingzhao.cn/聊聊毕业设计系列1.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://www.huangmingzhao.cn/聊聊毕业设计系列1.html",
+    "headline": "聊聊毕业设计系列 --- 项目介绍",
+    "datePublished": "Sat Aug 18 2018 22:53:01 GMT+0800",
+    "dateModified": "Sun Aug 26 2018 23:52:16 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "黄明照",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar1.jpg"
+        },
+        "description": "Be A Hero To Myself"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "黄明照--一个在路上慢慢行走的前端人",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Express,毕业设计,Vue,Node.js,MongoDB,Mongoose,Sockit.io黄明照、黄明照的个人博客、黄明照的个人网站、一个在路上慢慢行走的前端人",
+    "description": "黄明照、黄明照的个人博客、黄明照的个人网站、一个在路上慢慢行走的前端人",
+}
+</script>
 
 
     
@@ -297,141 +330,295 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#效果展示"><span class="post-toc-number">1.</span> <span class="post-toc-text">效果展示</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#github"><span class="post-toc-number">2.</span> <span class="post-toc-text">github</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前言"><span class="post-toc-number">3.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#系统业务分析"><span class="post-toc-number">4.</span> <span class="post-toc-text">系统业务分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#面向用户的移动端WebApp"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">面向用户的移动端WebApp</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#面向管理员和合作作者的后台管理系统"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">面向管理员和合作作者的后台管理系统</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#系统设计"><span class="post-toc-number">5.</span> <span class="post-toc-text">系统设计</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#系统架构设计"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">系统架构设计</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#功能模块设计"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">功能模块设计</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据库设计"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">数据库设计</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#接下来"><span class="post-toc-number">6.</span> <span class="post-toc-text">接下来</span></a></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
-    <!-- Single Links Page -->
-    <style>
-    .md-links {
-        min-height: calc(100% - 120px - 5pc - 6em);
-        text-align: center;
-        overflow: auto;
-        padding: 0;
-        margin: 0 auto;
-        max-width: 320px;
-    }
+    <!-- Post Module -->
+    <div class="material-post_container">
 
-    @media screen and (min-width: 680px) {
-        .md-links {
-            max-width: 640px;
-        }
-    }
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
-    @media screen and (min-width: 1000px) {
-        .md-links {
-            max-width: 960px;
-        }
-    }
-
-    @media screen and (min-width: 1320px) {
-        .md-links {
-            max-width: 1280px;
-        }
-    }
-
-    @media screen and (min-width: 1640px) {
-        .md-links {
-            max-width: 1600px;
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        .md-links {
-            min-height: calc(100% - 200px - 5pc - 6em);
-            margin-top: 6em;
-        }
-    }
-
-    .md-links-item {
-        background: #fff;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-        height: 72px;
-        line-height: 15px;
-        margin: 20px 10px;
-        padding: 0px 0px;
-        transition: box-shadow 0.25s;
-    }
-
-    .md-links a {
-        color: #333;
-        text-decoration: none;
-    }
-
-    .md-links li {
-        width: 300px;
-        float: left;
-        list-style: none;
-    }
-
-    .md-links-item img {
-        float: left;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 11px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-    }
-
-    .md-links-item:hover {
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .md-links-item a:hover{
-        cursor: pointer;
-    }
-
-    .md-links-title {
-        font-size: 20px;
-        line-height: 50px;
-    }
-
-    #scheme-Paradox .mdl-mini-footer{
-        clear: left;
-    }
-    #bottom{
-        position: relative;
-    }
-</style>
-
-<ul class="md-links">
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
-            <li class="md-links-item">
-                <a href="https://viosey.com/" title="viosey" target="_blank">
-                    <img src="http://ouchrragd.bkt.clouddn.com/logo_blue_grey.png" alt="viosey" height="72px"/>
-                    <span class="md-links-title">viosey</span><br />
-                    <span>一生想做自由 Geek</span>
-                </a>
-            </li>
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
         
-            <li class="md-links-item">
-                <a href="https://blog.halyul.com/" title="Halyul" target="_blank">
-                    <img src="https://gravatar.com/userimage/113938008/0ffede3b011b3a1725a0bae6b2db2c72.png?size=200" alt="Halyul" height="72px"/>
-                    <span class="md-links-title">Halyul</span><br />
-                    <span>Never do a dreamer</span>
-                </a>
+    
+            <p class="article-headline-p">
+                聊聊毕业设计系列 --- 项目介绍
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar1.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>黄明照</strong>
+        <span>8月 18, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Express/">Express</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/MongoDB/">MongoDB</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Mongoose/">Mongoose</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Node-js/">Node.js</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Sockit-io/">Sockit.io</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Vue/">Vue</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/毕业设计/">毕业设计</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    <!-- Leancloud Views -->
+        <a class="post_share-link" href="#">
+            <li class="mdl-menu__item">
+                <span id="/聊聊毕业设计系列1.html" class="leancloud-views_num" data-flag-title="聊聊毕业设计系列 --- 项目介绍">
+     &nbsp;浏览量
+</span>
+
             </li>
-        
-            <li class="md-links-item">
-                <a href="https://blog.liufulin.online/" title="Liu Fotint&#39;s blog" target="_blank">
-                    <img src="https://blog.liufulin.online/img/avatar.jpg" alt="Liu Fotint&#39;s blog" height="72px"/>
-                    <span class="md-links-title">Liu Fotint&#39;s blog</span><br />
-                    <span>念念不忘，必有回响</span>
-                </a>
+        </a>
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=聊聊毕业设计系列 --- 项目介绍&url=http://www.huangmingzhao.cn/聊聊毕业设计系列1.html&pic=http://www.huangmingzhao.cn/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
             </li>
-        
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=聊聊毕业设计系列 --- 项目介绍&url=http://www.huangmingzhao.cn/聊聊毕业设计系列1.html&via=黄明照" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://www.huangmingzhao.cn/聊聊毕业设计系列1.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://www.huangmingzhao.cn/聊聊毕业设计系列1.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=黄明照--一个在路上慢慢行走的前端人&title=聊聊毕业设计系列 --- 项目介绍&summary=黄明照、黄明照的个人博客、黄明照的个人网站、一个在路上慢慢行走的前端人&pics=http://www.huangmingzhao.cn/img/favicon.png&url=http://www.huangmingzhao.cn/聊聊毕业设计系列1.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
     
 </ul>
 
-<script type="text/ls-javascript" id="page-links-script">
-    var adjustFooter = function() {
-        if( ($('#bottom').offset().top + $('#bottom').outerHeight() )<$(window).height() ) {
-            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
-            $('#bottom').css('bottom', '-' + footerBottom + 'px');
-        }
-    };
-    $(document).ready(function() {
-        adjustFooter();
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h1><p><img src="https://user-gold-cdn.xitu.io/2018/8/26/16576a709bd02f5f?w=1409&amp;h=521&amp;f=gif&amp;s=30128195" alt="管理系统"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/8/26/16576a8711c14cbc?w=341&amp;h=569&amp;f=gif&amp;s=48073144" alt="WebApp"></p>
+<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><p><a href="https://github.com/ishareme/moment-server" target="_blank" rel="noopener">moment-server github地址</a></p>
+<p><a href="https://github.com/ishareme/moment" target="_blank" rel="noopener">moment github地址</a></p>
+<p><a href="https://github.com/ishareme/moment-manage" target="_blank" rel="noopener">moment-manage github地址</a></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>本论文对在移动互联网的大环境下，人们对阅读的需求和存在的问题以及发展趋势进行了深入分析研究之后，主要目的是设计一套简约优雅风格的UI，即UserInterface（用户界面），采用<code>Express</code>为Node.js的web开发框架，<code>Mongoose</code>模块来管理非关系型数据库MongoDB，在前端工程中主要运用了渐进式JavaScript框架<code>Vue.js</code>，使用<code>Vue-router</code>做前端页面路由的跳转，使用<code>Axios</code>作为HTTP请求库，同时使用<code>Vuex</code>负责前端全局状态管理，使用<code>ElementUI</code>作为界面基础组件库，使用<code>Webpack</code>进行模块化打包，并结合HTML5相关技术最终实现一个包含<strong>图文类、阅读类、影视类、音乐类和电台类五大版块的文艺类阅读系统</strong>，取名为<code>Moment</code>，意为片刻，旨在为人们提供一个平台，让人们在碎片化的时间里进行有效阅读。将实现系统中的两大主要部分：<strong>面向管理员和合作作者的后台管理系统</strong> 和 <strong>面向用户的移动端WebApp</strong>。        <br> <br>                      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;— 摘自本人论文</p>
+</blockquote>
+<p>好了好了，以上纯属装x，三流的学校三流的毕业设计，看官随意就好。引言中做了毕业设计项目的介绍，实现一个包含图文类、阅读类、影视类、音乐类和电台类五大版块的<strong>文艺类阅读系统</strong>，取名为<code>Moment</code>。主要运用到的技术栈有：</p>
+<ul>
+<li>Node.js — Express</li>
+<li>MongoDB — Mongoose</li>
+<li>Vue</li>
+<li>Vue-router</li>
+<li>Axios</li>
+<li>Vuex</li>
+<li>ElementUI</li>
+<li>Socket.io</li>
+<li>…</li>
+</ul>
+<p>在项目开始之前还很激动乘还是学生的时候在腾讯云上买了云服务器，注册了第二个域名<code>momentin.cn</code>，到后面部署上去发现接口请求太慢了，于是乎还是放弃了，其实最重要的还是bug多多哈哈哈，性能优化还没做好。不过后面会继续部署上线。</p>
+<h1 id="系统业务分析"><a href="#系统业务分析" class="headerlink" title="系统业务分析"></a>系统业务分析</h1><p>作为一个文艺类阅读系统，最主要的目的就是为用户提供优质的阅读体验和丰富的阅读内容。从而，以此作为目标，本系统业务中对阅读文章的分类又分为图文类、阅读类、影视类、音乐类和电台类这五个版块，于目于耳对文章的形式进行多样化。又将整个文艺类阅读系统的业务划分为两大部分，分别是面向管理员和合作作者的后台管理系统和面向用户的移动端WebApp，系统的需求分析将围绕这两部分进行展开。</p>
+<h2 id="面向用户的移动端WebApp"><a href="#面向用户的移动端WebApp" class="headerlink" title="面向用户的移动端WebApp"></a>面向用户的移动端WebApp</h2><p>面向用户的移动端WebApp最重要的业务是提供文章的阅读，这个业务是面向所有可使用系统的用户。当然考虑到用户不仅仅满足于阅读，也需要以文章作为媒介进行用户之间的社交性活动，因此系统增加了图文广场模块，类似于一个圈子，所有用户都可以发布图文及查看，再比如关注，互相评论等各种互动。社交性的操作后往往需要给用户一些提醒，不然将失去意义，而且必须保证这个提醒是实时的，所以需要对用户进行实时的消息推送。当然用户难免对文章本身进行操作，比如评论、点赞、收藏等操作。所有用户都可以对文章进行阅读，但是一旦涉及到社交性操作的话就要以用户有登录注册的前提。</p>
+<h2 id="面向管理员和合作作者的后台管理系统"><a href="#面向管理员和合作作者的后台管理系统" class="headerlink" title="面向管理员和合作作者的后台管理系统"></a>面向管理员和合作作者的后台管理系统</h2><p>这个系统的管理，系统主要分为两种角色进行管理。系统管理员角色可以看到移动端WebApp整体数据情况，可以对用户进行管理包括合作作者和所有普通用户，以及可以对图文、阅读、影视、音乐、电台所有文章进行管理，并且可以对系统的其他模块进行管理，例如广告模块、轮播图模块、公告模块等。而作者角色的权限就相对比较少，仅包含对文章的管理。</p>
+<p>注： 由于时间关系 WebApp整体数据情况这块，它的数据库字段是有，但是当时匆匆忙忙没时间写接口，目前以静态展示。系统管理这一块也未处理完毕。</p>
+<h1 id="系统设计"><a href="#系统设计" class="headerlink" title="系统设计"></a>系统设计</h1><h2 id="系统架构设计"><a href="#系统架构设计" class="headerlink" title="系统架构设计"></a>系统架构设计</h2><p><img src="https://user-gold-cdn.xitu.io/2018/8/9/1651f1aeaf2894a8?w=613&amp;h=594&amp;f=png&amp;s=43570" alt="系统架构"></p>
+<p>系统架构？？这么装逼的词哈哈哈哈，其实也就传统的B/S架构，前后端分离。前端通过发起ajax接口请求，web服务器对请求进行处理并操作数据库服务器，返回json格式数据到前端，前端拿到数据后，处理数据并进行渲染。</p>
+<h2 id="功能模块设计"><a href="#功能模块设计" class="headerlink" title="功能模块设计"></a>功能模块设计</h2><p><img src="https://user-gold-cdn.xitu.io/2018/8/9/1651f235d31bd879?w=947&amp;h=659&amp;f=png&amp;s=96879" alt="功能模块"></p>
+<p>这是当初项目开始前的一个粗略功能模块设计，其中一小部分模块由于当初时间关系还未做全，不过大部分功能模块已经实现。</p>
+<h2 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h2><p>系统数据库的存储主要包含了：文章数据存储，用户数据存储，管理员和合作作者数据存储，文章评论存储，用户间关系存储。其中的文章数据存储又分为图文文章数据存储、阅读文章数据存储、影视文章数据存储、音乐文章数据存储、电台文章数据存储。其中的文章评论数据存储又分为阅读评论数据存储、影视评论数据存储、音乐评论数据存储、电台评论数据存储。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/8/18/1654d73d702c2790?w=843&amp;h=816&amp;f=png&amp;s=55313" alt="数据库设计"></p>
+<h1 id="接下来"><a href="#接下来" class="headerlink" title="接下来"></a>接下来</h1><p>现在咱们也对项目做了个介绍，并且对系统分析和系统设计做了大概的介绍。那么接下来的文章会对系统的实现做介绍，会介绍到项目中主要的一些功能模块，或者说可拿出来与大家分享的模块，以及介绍这个项目之后自己的一点点思考。</p>
+<p>本人水平一般，介绍的可能也是一些基础，见谅见谅~~</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <div id="comment" style='padding:10px;' class="vcomment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'false' == true;
+    var verify = 'false' == true;
+    new Valine({
+        el: '.vcomment',
+        notify: notify,
+        verify: verify,
+        appId: "ztvc2Jdss3JEXFT7bmDXiR6u-gzGzoHsz",
+        appKey: "SaIXu97lk5KQeyTiQ6VmgDLF",
+        placeholder: "Just go go",
+        pageSize:'10',
+        avatar:'identicon',
+        lang:'zh-cn'
     });
 </script>
 
+                
+            </div>
 
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/聊聊毕业设计系列2.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/HTTP缓存策略与增量更新.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
 
 
 
@@ -665,6 +852,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
