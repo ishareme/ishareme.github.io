@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.huangmingzhao.cn/"/>
-  <updated>2018-10-08T14:49:42.000Z</updated>
+  <updated>2018-10-08T15:44:38.000Z</updated>
   <id>http://www.huangmingzhao.cn/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://www.huangmingzhao.cn/Mongoose.html"/>
     <id>http://www.huangmingzhao.cn/Mongoose.html</id>
     <published>2018-10-08T14:49:01.000Z</published>
-    <updated>2018-10-08T14:49:42.000Z</updated>
+    <updated>2018-10-08T15:44:38.000Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;何为Mongoose？&quot;&gt;&lt;a href=&quot;#何为Mongoose？&quot; class=&quot;headerlink&quot; title=&quot;何为Mongoose？&quot;&gt;&lt;/a&gt;何为Mongoose？&lt;/h2&gt;&lt;p&gt;简单的说，Mongoose就是对node环境中MongoDB数据库操
+        &lt;h1 id=&quot;MongoDB&quot;&gt;&lt;a href=&quot;#MongoDB&quot; class=&quot;headerlink&quot; title=&quot;MongoDB&quot;&gt;&lt;/a&gt;MongoDB&lt;/h1&gt;&lt;h2 id=&quot;何为MongoDB？&quot;&gt;&lt;a href=&quot;#何为MongoDB？&quot; class=&quot;head
       
     
     </summary>
@@ -60,6 +60,8 @@
     
       <category term="Express" scheme="http://www.huangmingzhao.cn/tags/Express/"/>
     
+      <category term="Mongoose" scheme="http://www.huangmingzhao.cn/tags/Mongoose/"/>
+    
       <category term="毕业设计" scheme="http://www.huangmingzhao.cn/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
     
       <category term="Vue" scheme="http://www.huangmingzhao.cn/tags/Vue/"/>
@@ -67,8 +69,6 @@
       <category term="Node.js" scheme="http://www.huangmingzhao.cn/tags/Node-js/"/>
     
       <category term="MongoDB" scheme="http://www.huangmingzhao.cn/tags/MongoDB/"/>
-    
-      <category term="Mongoose" scheme="http://www.huangmingzhao.cn/tags/Mongoose/"/>
     
       <category term="Sockit.io" scheme="http://www.huangmingzhao.cn/tags/Sockit-io/"/>
     
@@ -95,6 +95,8 @@
     
       <category term="Express" scheme="http://www.huangmingzhao.cn/tags/Express/"/>
     
+      <category term="Mongoose" scheme="http://www.huangmingzhao.cn/tags/Mongoose/"/>
+    
       <category term="毕业设计" scheme="http://www.huangmingzhao.cn/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
     
       <category term="Vue" scheme="http://www.huangmingzhao.cn/tags/Vue/"/>
@@ -102,8 +104,6 @@
       <category term="Node.js" scheme="http://www.huangmingzhao.cn/tags/Node-js/"/>
     
       <category term="MongoDB" scheme="http://www.huangmingzhao.cn/tags/MongoDB/"/>
-    
-      <category term="Mongoose" scheme="http://www.huangmingzhao.cn/tags/Mongoose/"/>
     
       <category term="Sockit.io" scheme="http://www.huangmingzhao.cn/tags/Sockit-io/"/>
     
