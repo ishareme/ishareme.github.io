@@ -1,5 +1,6 @@
 http://www.huangmingzhao.cn/聊聊毕业设计系列2.html
 http://www.huangmingzhao.cn/聊聊毕业设计系列1.html
+http://www.huangmingzhao.cn/Mongoose.html
 http://www.huangmingzhao.cn/HTTP缓存策略与增量更新.html
 http://www.huangmingzhao.cn/video-compatible.html
 http://www.huangmingzhao.cn/practice-summary-andy-move2.html
@@ -7,4 +8,3 @@ http://www.huangmingzhao.cn/particle-canvas.html
 http://www.huangmingzhao.cn/ClipImageDemo-FileAPI.html
 http://www.huangmingzhao.cn/ClipImage.html
 http://www.huangmingzhao.cn/canvas-api.html
-http://www.huangmingzhao.cn/publish-subscribe-mode.html
