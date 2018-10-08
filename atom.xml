@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.huangmingzhao.cn/"/>
-  <updated>2018-08-26T15:53:17.000Z</updated>
+  <updated>2018-10-08T14:49:42.000Z</updated>
   <id>http://www.huangmingzhao.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mongoose</title>
+    <link href="http://www.huangmingzhao.cn/Mongoose.html"/>
+    <id>http://www.huangmingzhao.cn/Mongoose.html</id>
+    <published>2018-10-08T14:49:01.000Z</published>
+    <updated>2018-10-08T14:49:42.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;何为Mongoose？&quot;&gt;&lt;a href=&quot;#何为Mongoose？&quot; class=&quot;headerlink&quot; title=&quot;何为Mongoose？&quot;&gt;&lt;/a&gt;何为Mongoose？&lt;/h2&gt;&lt;p&gt;简单的说，Mongoose就是对node环境中MongoDB数据库操
+      
+    
+    </summary>
+    
+      <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Mongoose" scheme="http://www.huangmingzhao.cn/tags/Mongoose/"/>
+    
+  </entry>
   
   <entry>
     <title>聊聊毕业设计系列 --- 系统实现</title>
@@ -83,29 +106,6 @@
       <category term="Mongoose" scheme="http://www.huangmingzhao.cn/tags/Mongoose/"/>
     
       <category term="Sockit.io" scheme="http://www.huangmingzhao.cn/tags/Sockit-io/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mongoose</title>
-    <link href="http://www.huangmingzhao.cn/Mongoose.html"/>
-    <id>http://www.huangmingzhao.cn/Mongoose.html</id>
-    <published>2018-08-18T14:53:01.000Z</published>
-    <updated>2018-10-08T14:48:04.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;何为Mongoose？&quot;&gt;&lt;a href=&quot;#何为Mongoose？&quot; class=&quot;headerlink&quot; title=&quot;何为Mongoose？&quot;&gt;&lt;/a&gt;何为Mongoose？&lt;/h2&gt;&lt;p&gt;简单的说，Mongoose就是对node环境中MongoDB数据库操
-      
-    
-    </summary>
-    
-      <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Mongoose" scheme="http://www.huangmingzhao.cn/tags/Mongoose/"/>
     
   </entry>
   
