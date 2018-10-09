@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.huangmingzhao.cn/"/>
-  <updated>2018-10-09T03:00:04.000Z</updated>
+  <updated>2018-10-09T06:27:08.000Z</updated>
   <id>http://www.huangmingzhao.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://www.huangmingzhao.cn/MongoDB-Mongoose.html"/>
     <id>http://www.huangmingzhao.cn/MongoDB-Mongoose.html</id>
     <published>2018-10-08T14:49:01.000Z</published>
-    <updated>2018-10-09T03:00:04.000Z</updated>
+    <updated>2018-10-09T06:27:08.000Z</updated>
     
     <summary type="html">
     
@@ -58,6 +58,8 @@
       <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
     
     
+      <category term="Mongoose" scheme="http://www.huangmingzhao.cn/tags/Mongoose/"/>
+    
       <category term="Express" scheme="http://www.huangmingzhao.cn/tags/Express/"/>
     
       <category term="毕业设计" scheme="http://www.huangmingzhao.cn/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
@@ -67,8 +69,6 @@
       <category term="Node.js" scheme="http://www.huangmingzhao.cn/tags/Node-js/"/>
     
       <category term="MongoDB" scheme="http://www.huangmingzhao.cn/tags/MongoDB/"/>
-    
-      <category term="Mongoose" scheme="http://www.huangmingzhao.cn/tags/Mongoose/"/>
     
       <category term="Sockit.io" scheme="http://www.huangmingzhao.cn/tags/Sockit-io/"/>
     
@@ -93,6 +93,8 @@
       <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
     
     
+      <category term="Mongoose" scheme="http://www.huangmingzhao.cn/tags/Mongoose/"/>
+    
       <category term="Express" scheme="http://www.huangmingzhao.cn/tags/Express/"/>
     
       <category term="毕业设计" scheme="http://www.huangmingzhao.cn/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
@@ -102,8 +104,6 @@
       <category term="Node.js" scheme="http://www.huangmingzhao.cn/tags/Node-js/"/>
     
       <category term="MongoDB" scheme="http://www.huangmingzhao.cn/tags/MongoDB/"/>
-    
-      <category term="Mongoose" scheme="http://www.huangmingzhao.cn/tags/Mongoose/"/>
     
       <category term="Sockit.io" scheme="http://www.huangmingzhao.cn/tags/Sockit-io/"/>
     
