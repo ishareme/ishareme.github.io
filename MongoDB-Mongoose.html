@@ -241,7 +241,7 @@
 
     
         <meta property="article:published_time" content="Mon Oct 08 2018 22:49:01 GMT+0800">
-        <meta property="article:modified_time" content="Tue Oct 09 2018 14:27:08 GMT+0800">
+        <meta property="article:modified_time" content="Tue Oct 09 2018 14:27:53 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -264,7 +264,7 @@
     "mainEntityOfPage": "http://www.huangmingzhao.cn/MongoDB-Mongoose.html",
     "headline": "MongoDB与Mongoose",
     "datePublished": "Mon Oct 08 2018 22:49:01 GMT+0800",
-    "dateModified": "Tue Oct 09 2018 14:27:08 GMT+0800",
+    "dateModified": "Tue Oct 09 2018 14:27:53 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "黄明照",
@@ -566,7 +566,7 @@
 <li><p><strong>删除指定文档</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">delete from article where title = &quot;mongodb&quot;</span><br><span class="line"></span><br><span class="line">db.article.remove(&#123;title: &quot;mongodb&quot;&#125;)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>**limit和skip</p>
+<li><p><strong>limit和skip</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from article limit 10, 20</span><br><span class="line"></span><br><span class="line">db.article.find().skip(10).limit(20)  //结合limit()和skip()来达到分页效果</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
