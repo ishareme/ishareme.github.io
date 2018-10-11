@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.huangmingzhao.cn/HTTP%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5%E4%B8%8E%E5%A2%9E%E9%87%8F%E6%9B%B4%E6%96%B0.html</loc>
+    <lastmod>2018-10-11T10:38:45.000Z</lastmod>
+    <data>
+        <display>
+        <title>HTTP缓存策略与增量更新总结</title>
+        <pubTime>2018-03-09T14:31:01.000Z</pubTime>
+        
+        <tag>缓存</tag>
+         
+         
+           
+             
+              <breadCrumb title="渣技术" url="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.huangmingzhao.cn/MongoDB-Mongoose.html</loc>
     <lastmod>2018-10-09T07:16:11.000Z</lastmod>
     <data>
@@ -31,17 +51,17 @@
         <title>聊聊毕业设计系列 --- 系统实现</title>
         <pubTime>2018-08-26T03:53:01.000Z</pubTime>
         
+        <tag>Mongoose</tag>
+         
+        <tag>Express</tag>
+         
         <tag>毕业设计</tag>
          
         <tag>Vue</tag>
          
-        <tag>Express</tag>
-         
-        <tag>Node.js</tag>
-         
         <tag>MongoDB</tag>
          
-        <tag>Mongoose</tag>
+        <tag>Node.js</tag>
          
         <tag>Sockit.io</tag>
          
@@ -63,47 +83,19 @@
         <title>聊聊毕业设计系列 --- 项目介绍</title>
         <pubTime>2018-08-18T14:53:01.000Z</pubTime>
         
-        <tag>毕业设计</tag>
-         
-        <tag>Vue</tag>
-         
-        <tag>Express</tag>
-         
-        <tag>Node.js</tag>
-         
-        <tag>MongoDB</tag>
-         
         <tag>Mongoose</tag>
          
-        <tag>Sockit.io</tag>
+        <tag>Express</tag>
          
-         
-           
-             
-              <breadCrumb title="渣技术" url="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.huangmingzhao.cn/HTTP%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5%E4%B8%8E%E5%A2%9E%E9%87%8F%E6%9B%B4%E6%96%B0.html</loc>
-    <lastmod>2018-08-18T14:59:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>HTTP缓存策略与增量更新总结</title>
-        <pubTime>2018-03-09T14:31:01.000Z</pubTime>
-        
         <tag>毕业设计</tag>
          
         <tag>Vue</tag>
          
-        <tag>Express</tag>
+        <tag>MongoDB</tag>
          
         <tag>Node.js</tag>
          
-        <tag>MongoDB</tag>
+        <tag>Sockit.io</tag>
          
          
            
@@ -213,16 +205,14 @@
 
     
   <url>
-    <loc>http://www.huangmingzhao.cn/meitu-item-one.html</loc>
+    <loc>http://www.huangmingzhao.cn/canvas-api.html</loc>
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     <data>
         <display>
-        <title>美图H5项目总结--m8s_strut</title>
-        <pubTime>2017-10-28T13:57:01.000Z</pubTime>
+        <title>canvas API 汇总</title>
+        <pubTime>2018-02-23T16:02:01.000Z</pubTime>
         
-        <tag>美图</tag>
-         
-        <tag>H5项目</tag>
+        <tag>canvas</tag>
          
          
            
@@ -235,12 +225,12 @@
 
     
   <url>
-    <loc>http://www.huangmingzhao.cn/meitu-item-two.html</loc>
+    <loc>http://www.huangmingzhao.cn/meitu-item-lancome-hk.html</loc>
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     <data>
         <display>
-        <title>美图H5项目总结--bplus_halloween</title>
-        <pubTime>2017-10-29T12:41:01.000Z</pubTime>
+        <title>美图H5项目总结--lancome</title>
+        <pubTime>2018-01-05T09:01:01.000Z</pubTime>
         
         <tag>美图</tag>
          
@@ -299,6 +289,28 @@
 
     
   <url>
+    <loc>http://www.huangmingzhao.cn/meitu-item-one.html</loc>
+    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>美图H5项目总结--m8s_strut</title>
+        <pubTime>2017-10-28T13:57:01.000Z</pubTime>
+        
+        <tag>美图</tag>
+         
+        <tag>H5项目</tag>
+         
+         
+           
+             
+              <breadCrumb title="渣技术" url="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.huangmingzhao.cn/JavaScript01.html</loc>
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     <data>
@@ -318,32 +330,18 @@
     </url>
 
     
-  <url>
-    <loc>http://www.huangmingzhao.cn/hello-world.html</loc>
-    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2017-07-20T12:25:45.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
-    <loc>http://www.huangmingzhao.cn/autumn-recruit-Interview.html</loc>
+    <loc>http://www.huangmingzhao.cn/Express-mongoose-stu-management.html</loc>
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     <data>
         <display>
-        <title>秋招面试总结</title>
-        <pubTime>2017-10-26T14:11:01.000Z</pubTime>
+        <title>基于Express+mongoose搭建的学生管理系统</title>
+        <pubTime>2017-08-07T12:48:01.000Z</pubTime>
         
-        <tag>秋招</tag>
+        <tag>mongoose</tag>
          
-        <tag>面试</tag>
+        <tag>Express</tag>
          
          
            
@@ -378,14 +376,16 @@
 
     
   <url>
-    <loc>http://www.huangmingzhao.cn/canvas-api.html</loc>
+    <loc>http://www.huangmingzhao.cn/autumn-recruit-Interview.html</loc>
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     <data>
         <display>
-        <title>canvas API 汇总</title>
-        <pubTime>2018-02-23T16:02:01.000Z</pubTime>
+        <title>秋招面试总结</title>
+        <pubTime>2017-10-26T14:11:01.000Z</pubTime>
         
-        <tag>canvas</tag>
+        <tag>秋招</tag>
+         
+        <tag>面试</tag>
          
          
            
@@ -397,14 +397,31 @@
     </url>
 
     
-    
   <url>
-    <loc>http://www.huangmingzhao.cn/meitu-item-lancome-hk.html</loc>
+    <loc>http://www.huangmingzhao.cn/hello-world.html</loc>
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     <data>
         <display>
-        <title>美图H5项目总结--lancome</title>
-        <pubTime>2018-01-05T09:01:01.000Z</pubTime>
+        <title>Hello World</title>
+        <pubTime>2017-07-20T12:25:45.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+  <url>
+    <loc>http://www.huangmingzhao.cn/meitu-item-two.html</loc>
+    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>美图H5项目总结--bplus_halloween</title>
+        <pubTime>2017-10-29T12:41:01.000Z</pubTime>
         
         <tag>美图</tag>
          
@@ -419,31 +436,6 @@
     </data>
     </url>
 
-    
-  <url>
-    <loc>http://www.huangmingzhao.cn/Express-mongoose-stu-management.html</loc>
-    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>基于Express+mongoose搭建的学生管理系统</title>
-        <pubTime>2017-08-07T12:48:01.000Z</pubTime>
-        
-        <tag>Express</tag>
-         
-        <tag>mongoose</tag>
-         
-         
-           
-             
-              <breadCrumb title="渣技术" url="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
     
   <url>
     <loc>http://www.huangmingzhao.cn/fistpost.html</loc>

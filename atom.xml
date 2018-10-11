@@ -58,17 +58,17 @@
       <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
     
     
+      <category term="Mongoose" scheme="http://www.huangmingzhao.cn/tags/Mongoose/"/>
+    
+      <category term="Express" scheme="http://www.huangmingzhao.cn/tags/Express/"/>
+    
       <category term="毕业设计" scheme="http://www.huangmingzhao.cn/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
     
       <category term="Vue" scheme="http://www.huangmingzhao.cn/tags/Vue/"/>
     
-      <category term="Express" scheme="http://www.huangmingzhao.cn/tags/Express/"/>
-    
-      <category term="Node.js" scheme="http://www.huangmingzhao.cn/tags/Node-js/"/>
-    
       <category term="MongoDB" scheme="http://www.huangmingzhao.cn/tags/MongoDB/"/>
     
-      <category term="Mongoose" scheme="http://www.huangmingzhao.cn/tags/Mongoose/"/>
+      <category term="Node.js" scheme="http://www.huangmingzhao.cn/tags/Node-js/"/>
     
       <category term="Sockit.io" scheme="http://www.huangmingzhao.cn/tags/Sockit-io/"/>
     
@@ -93,17 +93,17 @@
       <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
     
     
+      <category term="Mongoose" scheme="http://www.huangmingzhao.cn/tags/Mongoose/"/>
+    
+      <category term="Express" scheme="http://www.huangmingzhao.cn/tags/Express/"/>
+    
       <category term="毕业设计" scheme="http://www.huangmingzhao.cn/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
     
       <category term="Vue" scheme="http://www.huangmingzhao.cn/tags/Vue/"/>
     
-      <category term="Express" scheme="http://www.huangmingzhao.cn/tags/Express/"/>
-    
-      <category term="Node.js" scheme="http://www.huangmingzhao.cn/tags/Node-js/"/>
-    
       <category term="MongoDB" scheme="http://www.huangmingzhao.cn/tags/MongoDB/"/>
     
-      <category term="Mongoose" scheme="http://www.huangmingzhao.cn/tags/Mongoose/"/>
+      <category term="Node.js" scheme="http://www.huangmingzhao.cn/tags/Node-js/"/>
     
       <category term="Sockit.io" scheme="http://www.huangmingzhao.cn/tags/Sockit-io/"/>
     
@@ -114,14 +114,15 @@
     <link href="http://www.huangmingzhao.cn/HTTP%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5%E4%B8%8E%E5%A2%9E%E9%87%8F%E6%9B%B4%E6%96%B0.html"/>
     <id>http://www.huangmingzhao.cn/HTTP缓存策略与增量更新.html</id>
     <published>2018-03-09T14:31:01.000Z</published>
-    <updated>2018-08-18T14:59:59.000Z</updated>
+    <updated>2018-10-11T10:38:45.000Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;本论文对在移动互联网的大环境下，人们对阅读的需求和存在的问题以及发展趋势进行了深入分析研究之后，主要目的是设计一套
+        &lt;p&gt;合理的利用缓存是web性能优化的必要手段，对于咱们前端来说所接触的主要缓存策略是针对客户端浏览器，客户端的缓存可以分为两种:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt;  利用本地存储， 比如localStorage、SessionStorage等&lt;/p&gt;
+&lt;p&gt;
       
     
     </summary>
@@ -129,15 +130,7 @@
       <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="毕业设计" scheme="http://www.huangmingzhao.cn/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
-    
-      <category term="Vue" scheme="http://www.huangmingzhao.cn/tags/Vue/"/>
-    
-      <category term="Express" scheme="http://www.huangmingzhao.cn/tags/Express/"/>
-    
-      <category term="Node.js" scheme="http://www.huangmingzhao.cn/tags/Node-js/"/>
-    
-      <category term="MongoDB" scheme="http://www.huangmingzhao.cn/tags/MongoDB/"/>
+      <category term="缓存" scheme="http://www.huangmingzhao.cn/tags/%E7%BC%93%E5%AD%98/"/>
     
   </entry>
   
@@ -475,9 +468,9 @@
       <category term="渣技术" scheme="http://www.huangmingzhao.cn/categories/%E6%B8%A3%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Express" scheme="http://www.huangmingzhao.cn/tags/Express/"/>
-    
       <category term="mongoose" scheme="http://www.huangmingzhao.cn/tags/mongoose/"/>
+    
+      <category term="Express" scheme="http://www.huangmingzhao.cn/tags/Express/"/>
     
   </entry>
   

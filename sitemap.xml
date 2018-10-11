@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.huangmingzhao.cn/HTTP%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5%E4%B8%8E%E5%A2%9E%E9%87%8F%E6%9B%B4%E6%96%B0.html</loc>
+    
+    <lastmod>2018-10-11T10:38:45.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.huangmingzhao.cn/MongoDB-Mongoose.html</loc>
     
     <lastmod>2018-10-09T07:16:11.000Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://www.huangmingzhao.cn/%E8%81%8A%E8%81%8A%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1%E7%B3%BB%E5%88%971.html</loc>
     
     <lastmod>2018-08-26T15:52:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.huangmingzhao.cn/HTTP%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5%E4%B8%8E%E5%A2%9E%E9%87%8F%E6%9B%B4%E6%96%B0.html</loc>
-    
-    <lastmod>2018-08-18T14:59:59.000Z</lastmod>
     
   </url>
   
@@ -65,14 +65,14 @@
   </url>
   
   <url>
-    <loc>http://www.huangmingzhao.cn/meitu-item-one.html</loc>
+    <loc>http://www.huangmingzhao.cn/canvas-api.html</loc>
     
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.huangmingzhao.cn/meitu-item-two.html</loc>
+    <loc>http://www.huangmingzhao.cn/meitu-item-lancome-hk.html</loc>
     
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     
@@ -93,63 +93,14 @@
   </url>
   
   <url>
+    <loc>http://www.huangmingzhao.cn/meitu-item-one.html</loc>
+    
+    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.huangmingzhao.cn/JavaScript01.html</loc>
-    
-    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.huangmingzhao.cn/hello-world.html</loc>
-    
-    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.huangmingzhao.cn/autumn-recruit-Interview.html</loc>
-    
-    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.huangmingzhao.cn/the-use-of-pm2.html</loc>
-    
-    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.huangmingzhao.cn/canvas-api.html</loc>
-    
-    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.huangmingzhao.cn/links/index.html</loc>
-    
-    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.huangmingzhao.cn/meitu-item-lancome-hk.html</loc>
-    
-    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.huangmingzhao.cn/Express-mongoose-stu-management.html</loc>
-    
-    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.huangmingzhao.cn/gallery/index.html</loc>
     
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     
@@ -163,7 +114,56 @@
   </url>
   
   <url>
+    <loc>http://www.huangmingzhao.cn/Express-mongoose-stu-management.html</loc>
+    
+    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.huangmingzhao.cn/the-use-of-pm2.html</loc>
+    
+    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.huangmingzhao.cn/autumn-recruit-Interview.html</loc>
+    
+    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.huangmingzhao.cn/hello-world.html</loc>
+    
+    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.huangmingzhao.cn/timeline/index.html</loc>
+    
+    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.huangmingzhao.cn/gallery/index.html</loc>
+    
+    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.huangmingzhao.cn/links/index.html</loc>
+    
+    <lastmod>2018-03-02T07:24:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.huangmingzhao.cn/meitu-item-two.html</loc>
     
     <lastmod>2018-03-02T07:24:41.000Z</lastmod>
     
